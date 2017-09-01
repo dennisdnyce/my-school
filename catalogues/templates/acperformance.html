@@ -40,7 +40,7 @@
       <div style="overflow-x:auto;" >
 			<table >
 				<thead>
-					<tr >
+					<tr style="opacity:0.8; font-size:20px; width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
 					<th ><center>Year</center></th>
 					<th ><center>A</center></th>
 					<th ><center>A-</center></th>
@@ -61,7 +61,7 @@
 				<tbody>
 
           {% for school_performance in perform %}
-          <tr>
+          <tr style="opacity:0.8; font-size:20px; width:100%; font-color:#ffffff; background-color:#d5b60a; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
 					<td ><center><a href=""><br/>{{ school_performance.kcse_year }}</a></center></td>
 					<td ><center><a href=""><br/>{{ school_performance.grades_A_plain }}</a></center></td>
 					<td><center><a href=""><br/>{{ school_performance.grades_A_minus }}</a></center></td>

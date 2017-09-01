@@ -44,10 +44,10 @@
     								<div class="col-md-6 w3-agileits-news-left">
     									<div class="col-sm-7 wthree-news-info"><br/>
                         {% for school_bog_chairperson in bogchair %}
-                        <a href="news-single.html"><img src="{{ school_bog_chairperson.photo.url }}" width="100%" height="auto" alt="" /></a><br/><br/>
+                        <a href="news-single.html"><img style="border-bottom-left-radius:8em; border-bottom-right-radius:0.5em; border-top-right-radius:8em; border-top-left-radius:0.5em;" src="{{ school_bog_chairperson.photo.url }}" width="100%" height="auto" alt="" /></a><br/><br/>
     										<h5><strong><u>The B.O.G Chairperson</u></strong></h5><br/>
                         <h5><b>{{ school_bog_chairperson.name }},</b></h5><br/>
-    										<p style="width:122%">{{ school_bog_chairperson.few_words }}</p>
+    										<p style="opacity:0.8; font-size:16px; width:122%; font-color:ffffff; background-color:#d5b60a; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_bog_chairperson.few_words }}</p>
                         {% endfor %}
     									</div>
     									<div class="clearfix"> </div>
@@ -55,10 +55,10 @@
     								<div class="col-md-6 w3-agileits-news-left">
                       <div class="col-sm-7 wthree-news-info"><br/>
                         {% for school_pta_chairperson in ptachair %}
-                        <a href="news-single.html"><img src="{{ school_pta_chairperson.photo.url }}" width="100%" height="auto" alt="" /></a><br/><br/>
+                        <a href="news-single.html"><img style="border-bottom-left-radius:8em; border-bottom-right-radius:0.5em; border-top-right-radius:8em; border-top-left-radius:0.5em;" src="{{ school_pta_chairperson.photo.url }}" width="100%" height="auto" alt="" /></a><br/><br/>
     										<h5><strong><u>The P.T.A Chairperson</u></strong></h5><br/>
                         <h5><b>{{ school_pta_chairperson.name }},</b></h5><br/>
-    										<p style="width:122%">{{ school_pta_chairperson.few_words }}</p>
+    										<p style="opacity:0.8; font-size:16px; width:122%; font-color:ffffff; background-color:#d5b60a; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_pta_chairperson.few_words }}</p>
                         {% endfor %}
     									</div>
     									<div class="clearfix"> </div>
@@ -74,13 +74,13 @@
             <div class="wthree-news-left">
               <div class="wthree-news-left-img" style="width:100%">
                 {% for school_principal in principal %}
-                <img src="{{ school_principal.photo.url }}" width="50%" height="auto" alt="" />
+                <img style="border-bottom-left-radius:8em; border-bottom-right-radius:0.5em; border-top-right-radius:8em; border-top-left-radius:0.5em;" src="{{ school_principal.photo.url }}" width="50%" height="auto" alt="" />
                 <div id="fb-root"></div>
                 <div class="w3-agile-news-text">
                   <br/><br/>
 									<h5><strong><u>The School Principal</u></strong></h5><br/>
                   <h5><b>{{ school_principal.name }},</b></h5><br/>
-                  <p>{{ school_principal.few_words }}</p>
+                  <p style="opacity:0.8; font-size:20px; width:100%; font-color:ffffff; background-color:#d5b60a; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_principal.few_words }}</p>
                 </div>
                 {% endfor %}
               </div>
@@ -95,10 +95,10 @@
                   <div class="col-md-6 w3-agileits-news-left">
                     <div class="col-sm-7 wthree-news-info">
                     {% for school_dp_academics in dpacademics %}
-                        <a href="news-single.html"><img src="{{ school_dp_academics.photo.url }}" width="100%" height="auto" alt="" /></a><br/><br/>
+                        <a href="news-single.html"><img style="border-bottom-left-radius:8em; border-bottom-right-radius:0.5em; border-top-right-radius:8em; border-top-left-radius:0.5em;" src="{{ school_dp_academics.photo.url }}" width="100%" height="auto" alt="" /></a><br/><br/>
                       <h5><strong><u>The D.P Academics</u></strong></h5><br/>
                       <h5><b>{{ school_dp_academics.name }},</b></h5><br/>
-                      <p style="width:122%">{{ school_dp_academics.few_words }}</p>
+                      <p style="opacity:0.8; font-size:16px; width:122%; font-color:ffffff; background-color:#d5b60a; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_dp_academics.few_words }}</p>
                     {% endfor %}
                     </div>
                     <div class="clearfix"> </div>
@@ -106,10 +106,10 @@
                   <div class="col-md-6 w3-agileits-news-left">
                     <div class="col-sm-7 wthree-news-info"><br/>
                     {% for school_dp_admin in dpadmin %}
-                      <a href="news-single.html"><img src="{{ school_dp_admin.photo.url }}" width="100%" height="auto" alt="" /></a><br><br/>
+                      <a href="news-single.html"><img style="border-bottom-left-radius:8em; border-bottom-right-radius:0.5em; border-top-right-radius:8em; border-top-left-radius:0.5em;" src="{{ school_dp_admin.photo.url }}" width="100%" height="auto" alt="" /></a><br><br/>
                       <h5><strong><u>The D.P Administration</u></strong></h5><br/>
                       <h5><b>{{ school_dp_admin.name}},</b></h5><br/>
-                      <p style="width:122%">{{ school_dp_admin.few_words }}</p>
+                      <p style="opacity:0.8; font-size:16px; width:122%; font-color:ffffff; background-color:#d5b60a; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_dp_admin.few_words }}</p>
                     {% endfor %}
                     </div>
                     <div class="clearfix"> </div>
