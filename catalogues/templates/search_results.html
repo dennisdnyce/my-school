@@ -40,54 +40,54 @@
             <center><p style="width:100%; opacity:0.8; font-size:20px; color:#000000;">You searched for: <strong>{{ query }}</strong></p></center>
             {% if updated %}
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ updated|length }} result{{ updated|pluralize }}.</p></center>
-            <ul>
+            <ul style="list-style-type: none;">
                 {% for school_updates in updated %}
-                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ school_updates.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000; text-decoration:none">{{ school_updates.news_title }}</li></center>
                 {% endfor %}
             </ul>
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif admnews %}
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ admnews|length }} result{{ admnews|pluralize }}.</p></center>
-            <ul>
+            <ul style="list-style-type: none;">
                 {% for school_admission in admnews %}
-                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ school_admission.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000; text-decoration:none">{{ school_admission.news_title }}</li></center>
                 {% endfor %}
             </ul>
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif ponenews %}
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ ponenews|length }} result{{ ponenews|pluralize }}.</p></center>
-            <ul>
+            <ul style="list-style-type: none;">
                 {% for form_one_news_portal in ponenews %}
-                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ form_one_news_portal.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000; text-decoration:none">{{ form_one_news_portal.news_title }}</li></center>
                 {% endfor %}
             </ul>
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif ptwonews %}
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ ptwonews|length }} result{{ ptwonews|pluralize }}.</p></center>
-            <ul>
+            <ul style="list-style-type: none;">
                 {% for form_two_news_portal in ptwonews %}
-                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ form_two_news_portal.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000; text-decoration:none">{{ form_two_news_portal.news_title }}</li></center>
                 {% endfor %}
             </ul>
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif pthreenews %}
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ pthreenews|length }} result{{ pthreenews|pluralize }}.</p></center>
-            <ul>
+            <ul style="list-style-type: none;">
                 {% for form_three_news_portal in pthreenews %}
-                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ form_three_news_portal.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000; text-decoration:none">{{ form_three_news_portal.news_title }}</li></center>
                 {% endfor %}
             </ul>
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif pfournews %}
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ pfournews|length }} result{{ pfournews|pluralize }}.</p></center>
-            <ul>
+            <ul style="list-style-type: none;">
                 {% for form_four_news_portal in pfournews %}
-                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ form_four_news_portal.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000; text-decoration:none">{{ form_four_news_portal.news_title }}</li></center>
                 {% endfor %}
             </ul>
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
