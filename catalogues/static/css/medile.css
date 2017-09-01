@@ -47,7 +47,7 @@ ul#myTab {
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #fff500;
+    background-color: #d5b60a;
     outline: 0;
 }
 .nav-tabs > li {
@@ -72,14 +72,14 @@ ul#myTab {
 	border: none;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	    background-color: #fff500;
+	    background-color: #d5b60a;
     border: none;
     border-radius: 0;
 	color:#fff!important;
 	}
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
 	color: #fff;
-		    background-color: #fff500;
+		    background-color: #d5b60a;
     border: none;
     border-radius: 0;
 }
@@ -216,7 +216,7 @@ ul.w3l-ratings li,.w3l-ratings a{
     list-style: none;
 }
 ul.w3l-ratings li i ,.w3l-ratings a i{
-    color: #fff500;
+    color: #d5b60a;
 }
 /*---browse-grid-----*/
 .w3l-movie-gride-agile {
@@ -248,7 +248,7 @@ i.glyphicon.glyphicon-play-circle {
     top: 3%;
     left: 4%;
     padding: 20px 0 0 0;
-    background: #fff500;
+    background: #d5b60a;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -268,7 +268,7 @@ i.glyphicon.glyphicon-play-circle {
     right: 18%;
     width: 0;
     height: 0;
-    border-top: 8px solid #fff500;
+    border-top: 8px solid #d5b60a;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
     transform: rotate(85deg);
@@ -280,7 +280,7 @@ i.glyphicon.glyphicon-play-circle {
     box-shadow: 0px 0px 1px #999;
 }
 h4.latest-text {
-      border-left: 5px solid #fff500;
+      border-left: 5px solid #d5b60a;
     font-size: 2em;
     color: #212121;
     text-transform: uppercase;
