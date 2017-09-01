@@ -37,63 +37,63 @@
           <div class="wthree-news-left">
             <div class="wthree-news-left-img">
 
-            <center><p style="font-size:20px; width:100%;">You searched for: <strong>{{ query }}</strong></p></center>
+            <center><p style="width:100%; opacity:0.8; font-size:20px; color:#000000;">You searched for: <strong>{{ query }}</strong></p></center>
             {% if updated %}
-            <center><p style="font-size:20px;">Found {{ updated|length }} result{{ updated|pluralize }}.</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ updated|length }} result{{ updated|pluralize }}.</p></center>
             <ul>
                 {% for school_updates in updated %}
-                <center><li style="font-size:35px;">{{ school_updates.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ school_updates.news_title }}</li></center>
                 {% endfor %}
             </ul>
-            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif admnews %}
-            <center><p style="font-size:20px;">Found {{ admnews|length }} result{{ admnews|pluralize }}.</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ admnews|length }} result{{ admnews|pluralize }}.</p></center>
             <ul>
                 {% for school_admission in admnews %}
-                <center><li style="font-size:35px;">{{ school_admission.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ school_admission.news_title }}</li></center>
                 {% endfor %}
             </ul>
-            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif ponenews %}
-            <center><p style="font-size:20px;">Found {{ ponenews|length }} result{{ ponenews|pluralize }}.</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ ponenews|length }} result{{ ponenews|pluralize }}.</p></center>
             <ul>
                 {% for form_one_news_portal in ponenews %}
-                <center><li style="font-size:35px;">{{ form_one_news_portal.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ form_one_news_portal.news_title }}</li></center>
                 {% endfor %}
             </ul>
-            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif ptwonews %}
-            <center><p style="font-size:20px;">Found {{ ptwonews|length }} result{{ ptwonews|pluralize }}.</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ ptwonews|length }} result{{ ptwonews|pluralize }}.</p></center>
             <ul>
                 {% for form_two_news_portal in ptwonews %}
-                <center><li style="font-size:35px;">{{ form_two_news_portal.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ form_two_news_portal.news_title }}</li></center>
                 {% endfor %}
             </ul>
-            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif pthreenews %}
-            <center><p style="font-size:20px;">Found {{ pthreenews|length }} result{{ pthreenews|pluralize }}.</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ pthreenews|length }} result{{ pthreenews|pluralize }}.</p></center>
             <ul>
                 {% for form_three_news_portal in pthreenews %}
-                <center><li style="font-size:35px;">{{ form_three_news_portal.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ form_three_news_portal.news_title }}</li></center>
                 {% endfor %}
             </ul>
-            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
             {% elif pfournews %}
-            <center><p style="font-size:20px;">Found {{ pfournews|length }} result{{ pfournews|pluralize }}.</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ pfournews|length }} result{{ pfournews|pluralize }}.</p></center>
             <ul>
                 {% for form_four_news_portal in pfournews %}
-                <center><li style="font-size:35px;">{{ form_four_news_portal.news_title }}</li></center>
+                <center><li style="opacity:0.8; font-size:35px; color:#000000;">{{ form_four_news_portal.news_title }}</li></center>
                 {% endfor %}
             </ul>
-            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
         {% else %}
-            <center><p style="font-size:20px;">No results matched your search criteria.</p></center>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">No results matched your search criteria.</p></center>
         {% endif %}
             </div>
           </div>
