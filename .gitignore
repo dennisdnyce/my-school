@@ -1,0 +1,7 @@
+*.pyc
+*~
+__pycache__
+mymove
+db.sqlite3
+/media
+.DS_Store

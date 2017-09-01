@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block logo %}
+   {% for school_general_information in genen %}
+   <a href="{% url 'home' %}"><img class="welcome" src="{{ school_general_information.school_logo.url }}" height="150" width="150" alt=" "></a>
+   {% endfor %}
+{% endblock %}
+
+{% block general_head %}
+        {% for school_general_information in genen %}
+        <ul>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number }}</strong></li>
+        <li><img src="{{ school_general_information.mail_icon.url }}" height="20" width="20" alt=" ">&emsp; <strong>{{ school_general_information.school_emailaddress }}</strong></li>
+        </ul>
+        {% endfor %}
+{% endblock %}
+
+{% block social_links %}
+  <nav class="social">
+  <ul>
+    {% for school_general_information in genen %}
+    <li class="w3_twitter"><a href="{{ school_general_information.school_twitterlink }}" target="_blank">Twitter <i class="fa fa-twitter"></i></a></li>
+    <li class="w3_facebook"><a href="{{ school_general_information.school_facebooklink }}" target="_blank">Facebook <i class="fa fa-facebook"></i></a></li>
+    {% endfor %}
+  </ul>
+  </nav>
+{% endblock %}
+
+{% block home_content %}
+		<h4 class="latest-text w3_latest_text"><strong>School Classrooms</strong></h4>
+		<div class="container">
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Form 1 Classes</a></li>
+					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Form 2 Classes</a></li>
+					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Form 3 Classes</a></li>
+					<li role="presentation"><a href="#imdb" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">Form 4 Classes</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+					<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+						<div class="w3_agile_featured_movies">
+							<div class="wthree-news-left">
+								<div class="wthree-news-left-img">
+                  {% for form_one_classes in one %}
+									<img src="{{ form_one_classes.photo.url }}" width="100%" height="auto" alt="" />
+									<div id="fb-root"></div>
+									<div class="w3-agile-news-text">
+										<p>{{ form_one_classes.text }}</p>
+									</div>
+                  {% endfor %}
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+						<div class="wthree-news-left">
+							<div class="wthree-news-left-img">
+                {% for form_two_classes in two %}
+								<img src="{{ form_two_classes.photo.url }}" width="100%" height="auto" alt="" />
+								<div id="fb-root"></div>
+								<div class="w3-agile-news-text">
+									<p>{{ form_two_classes.text }}</p>
+								</div>
+                {% endfor %}
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="rating" aria-labelledby="rating-tab">
+						<div class="wthree-news-left">
+							<div class="wthree-news-left-img">
+                {% for form_three_classes in three %}
+								<img src="{{ form_three_classes.photo.url }}" width="100%" height="auto" alt="" />
+								<div id="fb-root"></div>
+								<div class="w3-agile-news-text">
+									<p>{{ form_three_classes.text }}</p>
+								</div>
+                {% endfor %}
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="imdb" aria-labelledby="imdb-tab">
+						<div class="wthree-news-left">
+							<div class="wthree-news-left-img">
+                {% for form_four_classes in four %}
+								<img src="{{ form_four_classes.photo.url }}" width="100%" height="auto" alt="Image Missing" />
+								<div id="fb-root"></div>
+								<div class="w3-agile-news-text">
+									<p>{{ form_four_classes.text }}</p>
+								</div>
+                {% endfor %}
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}
+{% block general_foot %}
+   {% for school_general_information in genen %}
+ <p>Copyright &copy; {{ school_general_information.current_year }} <br/>NjoNjo Girls High School. {{ school_general_information.school_address }}<br/> All Rights Reserved. Designed by <a href="http://www.pairware.co.ke" target="_blank">PHS</a></p>
+   {% endfor %}
+{% endblock %}

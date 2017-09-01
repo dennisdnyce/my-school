@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block logo %}
+   {% for school_general_information in scorer %}
+   <a href="{% url 'home' %}"><img class="welcome" src="{{ school_general_information.school_logo.url }}" height="150" width="150" alt=" "></a>
+   {% endfor %}
+{% endblock %}
+
+{% block general_head %}
+        {% for school_general_information in scorer %}
+        <ul>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number }}</strong></li>
+        <li><img src="{{ school_general_information.mail_icon.url }}" height="20" width="20" alt=" ">&emsp; <strong>{{ school_general_information.school_emailaddress }}</strong></li>
+        </ul>
+        {% endfor %}
+{% endblock %}
+
+{% block social_links %}
+  <nav class="social">
+  <ul>
+    {% for school_general_information in scorer %}
+    <li class="w3_twitter"><a href="{{ school_general_information.school_twitterlink }}" target="_blank">Twitter <i class="fa fa-twitter"></i></a></li>
+    <li class="w3_facebook"><a href="{{ school_general_information.school_facebooklink }}" target="_blank">Facebook <i class="fa fa-facebook"></i></a></li>
+    {% endfor %}
+  </ul>
+  </nav>
+{% endblock %}
+
+
+{% block home_content %}
+<center><h4 class="latest-text w3_latest_text" style="font-family:monotype corsiva;"><strong><u></u></strong></h4></center>
+<div class="container">
+  <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+    <div id="myTabContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+        <div class="w3_agile_featured_movies">
+          <div class="wthree-news-left">
+            <div class="wthree-news-left-img">
+
+            <center><p style="font-size:20px; width:100%;">You searched for: <strong>{{ query }}</strong></p></center>
+            {% if updated %}
+            <center><p style="font-size:20px;">Found {{ updated|length }} result{{ updated|pluralize }}.</p></center>
+            <ul>
+                {% for school_updates in updated %}
+                <center><li style="font-size:35px;">{{ school_updates.news_title }}</li></center>
+                {% endfor %}
+            </ul>
+            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+
+            {% elif admnews %}
+            <center><p style="font-size:20px;">Found {{ admnews|length }} result{{ admnews|pluralize }}.</p></center>
+            <ul>
+                {% for school_admission in admnews %}
+                <center><li style="font-size:35px;">{{ school_admission.news_title }}</li></center>
+                {% endfor %}
+            </ul>
+            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+
+            {% elif ponenews %}
+            <center><p style="font-size:20px;">Found {{ ponenews|length }} result{{ ponenews|pluralize }}.</p></center>
+            <ul>
+                {% for form_one_news_portal in ponenews %}
+                <center><li style="font-size:35px;">{{ form_one_news_portal.news_title }}</li></center>
+                {% endfor %}
+            </ul>
+            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+
+            {% elif ptwonews %}
+            <center><p style="font-size:20px;">Found {{ ptwonews|length }} result{{ ptwonews|pluralize }}.</p></center>
+            <ul>
+                {% for form_two_news_portal in ptwonews %}
+                <center><li style="font-size:35px;">{{ form_two_news_portal.news_title }}</li></center>
+                {% endfor %}
+            </ul>
+            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+
+            {% elif pthreenews %}
+            <center><p style="font-size:20px;">Found {{ pthreenews|length }} result{{ pthreenews|pluralize }}.</p></center>
+            <ul>
+                {% for form_three_news_portal in pthreenews %}
+                <center><li style="font-size:35px;">{{ form_three_news_portal.news_title }}</li></center>
+                {% endfor %}
+            </ul>
+            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+
+            {% elif pfournews %}
+            <center><p style="font-size:20px;">Found {{ pfournews|length }} result{{ pfournews|pluralize }}.</p></center>
+            <ul>
+                {% for form_four_news_portal in pfournews %}
+                <center><li style="font-size:35px;">{{ form_four_news_portal.news_title }}</li></center>
+                {% endfor %}
+            </ul>
+            <center><p style="font-size:20px;">Check the students' tab for more information on the query</p></center>
+
+        {% else %}
+            <center><p style="font-size:20px;">No results matched your search criteria.</p></center>
+        {% endif %}
+            </div>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}
+{% block general_foot %}
+   {% for school_general_information in scorer %}
+ <p>Copyright &copy; {{ school_general_information.current_year }} <br/>NjoNjo Girls High School. {{ school_general_information.school_address }}<br/> All Rights Reserved. Designed by <a href="http://www.pairware.co.ke" target="_blank">PHS</a></p>
+   {% endfor %}
+{% endblock %}

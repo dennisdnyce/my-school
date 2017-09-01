@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block logo %}
+   {% for school_general_information in general %}
+   <a href="{% url 'home' %}"><img class="welcome" src="{{ school_general_information.school_logo.url }}" height="150" width="150" alt=" "></a>
+   {% endfor %}
+{% endblock %}
+
+{% block general_head %}
+        {% for school_general_information in general %}
+        <ul>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number }}</strong></li>
+        <li><img src="{{ school_general_information.mail_icon.url }}" height="20" width="20" alt=" ">&emsp; <strong>{{ school_general_information.school_emailaddress }}</strong></li>
+        </ul>
+        {% endfor %}
+{% endblock %}
+
+{% block slide_content %}
+    <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+    <li data-target="#myCarousel" data-slide-to="5"></li>
+		<li data-target="#myCarousel" data-slide-to="6"></li>
+    <li data-target="#myCarousel" data-slide-to="7"></li>
+    <li data-target="#myCarousel" data-slide-to="8"></li>
+    <li data-target="#myCarousel" data-slide-to="9"></li>
+    <li data-target="#myCarousel" data-slide-to="10"></li>
+		<li data-target="#myCarousel" data-slide-to="11"></li>
+    <li data-target="#myCarousel" data-slide-to="12"></li>
+    <li data-target="#myCarousel" data-slide-to="13"></li>
+    <li data-target="#myCarousel" data-slide-to="14"></li>
+    <li data-target="#myCarousel" data-slide-to="15"></li>
+		<li data-target="#myCarousel" data-slide-to="16"></li>
+    <li data-target="#myCarousel" data-slide-to="17"></li>
+    <li data-target="#myCarousel" data-slide-to="18"></li>
+    <li data-target="#myCarousel" data-slide-to="19"></li>
+    </ol>
+
+
+   <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" style="">
+    {% for school_photo_gallery in gallery %}
+    {% if forloop.counter == 1 %}
+    <div class="item active">
+    {% else %}
+    <div class="item">
+    {% endif %}
+        <center><img src="{{ school_photo_gallery.photo.url }}" alt="Image" width="100%" height="500px"/></center>
+  <div class="carousel-caption">
+    <h3 style="margin-top:-100px;">{{ school_photo_gallery.title }}</h3>
+  </div>
+    </div>
+    {% endfor %}
+    </div>
+		<!-- Left and right controls -->
+	     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	         <span class="sr-only">Previous</span>
+	     </a>
+	     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	         <span class="sr-only">Next</span>
+	     </a>
+	 </div>
+{% endblock %}
+
+{% block social_links %}
+  <nav class="social">
+  <ul>
+    {% for school_general_information in general %}
+    <li class="w3_twitter"><a href="{{ school_general_information.school_twitterlink }}" target="_blank">Twitter <i class="fa fa-twitter"></i></a></li>
+    <li class="w3_facebook"><a href="{{ school_general_information.school_facebooklink }}" target="_blank">Facebook <i class="fa fa-facebook"></i></a></li>
+    {% endfor %}
+  </ul>
+  </nav>
+{% endblock %}
+
+{% block home_content %}
+		<h4 class="latest-text w3_latest_text"><strong>About NjoNjo Girls</strong></h4>
+		<div class="container">
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">School History</a></li>
+					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">School Mission</a></li>
+					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">School Vision</a></li>
+					<li role="presentation"><a href="#imdb" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">Site Map</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+					<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+						<div class="w3_agile_featured_movies">
+              {% for school_history in history %}
+							<div class="wthree-news-left">
+								<div class="wthree-news-left-img">
+									<img src="{{ school_history.photo.url }}" width="100%" height="auto" alt="" />
+									<div id="fb-root"></div>
+									<div class="w3-agile-news-text">
+										<p style="font-size:20px; width:100%;">{{ school_history.text }}</p>
+									</div>
+								</div>
+							</div>
+              {% endfor %}
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+            {% for school_mission in mission %}
+						<div class="wthree-news-left">
+							<div class="wthree-news-left-img">
+								<img src="{{ school_mission.photo.url }}" width="100%" height="auto" alt="" />
+								<div id="fb-root"></div>
+								<div class="w3-agile-news-text">
+									<p style="font-size:20px; width:100%;">{{ school_mission.text }}</p>
+								</div>
+							</div>
+						</div>
+            {% endfor %}
+						<div class="clearfix"> </div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="rating" aria-labelledby="rating-tab">
+            {% for school_vision in vision %}
+						<div class="wthree-news-left">
+							<div class="wthree-news-left-img">
+								<img src="{{ school_vision.photo.url }}" width="100%" height="auto" alt="" />
+								<div id="fb-root"></div>
+								<div class="w3-agile-news-text">
+									<p style="font-size:20px; width:100%;">{{ school_vision.text }}</p>
+								</div>
+							</div>
+						</div>
+            {% endfor %}
+						<div class="clearfix"> </div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="imdb" aria-labelledby="imdb-tab">
+            {% for school_site_map in sitemap %}
+						<div class="wthree-news-left">
+							<div class="wthree-news-left-img">
+								<img src="{{ school_site_map.photo.url }}" width="100%" height="auto" alt="" />
+								<div id="fb-root"></div>
+								<div class="w3-agile-news-text">
+									<p style="font-size:20px; width:100%;">{{ school_site_map.text }}</p>
+								</div>
+							</div>
+						</div>
+            {% endfor %}
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}
+{% block general_foot %}
+   {% for school_general_information in general %}
+ <p>Copyright &copy; {{ school_general_information.current_year }} <br/>NjoNjo Girls High School. {{ school_general_information.school_address }}<br/> All Rights Reserved. Designed by <a href="http://www.pairware.co.ke" target="_blank">PHS</a></p>
+   {% endfor %}
+{% endblock %}
