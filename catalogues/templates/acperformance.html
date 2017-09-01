@@ -37,24 +37,24 @@
 				<div id="myTabContent" class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
 		<div class="agile-news-table">
-      <div style="overflow-x:auto;">
-			<table border="1"  style="width:100%; color:#494444;" id="table-breakpoint">
+      <div style="overflow-x:auto;" >
+			<table >
 				<thead>
-					<tr>
-					<th><center>Year</center></th>
-					<th><center>A</center></th>
-					<th><center>A-</center></th>
-					<th><center>B+</center></th>
-					<th><center>B</center></th>
+					<tr >
+					<th ><center>Year</center></th>
+					<th ><center>A</center></th>
+					<th ><center>A-</center></th>
+					<th ><center>B+</center></th>
+					<th ><center>B</center></th>
 					<th><center>B-</center></th>
-					<th><center>C+</center></th>
-					<th><center>C</center></th>
-					<th><center>C-</center></th>
-					<th><center>D+</center></th>
+					<th ><center>C+</center></th>
+					<th ><center>C</center></th>
+					<th ><center>C-</center></th>
+					<th ><center>D+</center></th>
 					<th><center>D</center></th>
 					<th><center>D-</center></th>
-					<th><center>E</center></th>
-					<th><center>F</center></th>
+					<th ><center>E</center></th>
+					<th ><center>F</center></th>
 					<th><center>Mean<br/>Score</center></th>
 					</tr>
 				</thead>
@@ -62,21 +62,21 @@
 
           {% for school_performance in perform %}
           <tr>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.kcse_year }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_A_plain }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_A_minus }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_B_plus }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_B_plain }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_B_minus }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_C_plus }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_C_plain }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_C_minus }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_D_plus }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_D_plain }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_D_minus }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_E }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.grades_F }}</a></center></td>
-					<td class="w3-list-img"><center><a href=""><br/>{{ school_performance.school_mean_score }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.kcse_year }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_A_plain }}</a></center></td>
+					<td><center><a href=""><br/>{{ school_performance.grades_A_minus }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_B_plus }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_B_plain }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_B_minus }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_C_plus }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_C_plain }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_C_minus }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_D_plus }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_D_plain }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_D_minus }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_E }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.grades_F }}</a></center></td>
+					<td ><center><a href=""><br/>{{ school_performance.school_mean_score }}</a></center></td>
           </tr>
           {% endfor %}
 				</tbody>
