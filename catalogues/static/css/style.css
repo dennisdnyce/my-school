@@ -80,16 +80,16 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
 .w3_search input[type="submit"]{
 	outline: none;
     border: none;
-    background: #212121;
+    background: #fff500;
     padding: 10px 0;
     font-size: 14px;
-    color: #999999;
+    color: #000000;
     width: 22%;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 }
 .w3_search input[type="submit"]:hover{
-	background:#fff500;
+	background:#d5b60a;
 }
 .w3l_sign_in_register{
 	float: right;
