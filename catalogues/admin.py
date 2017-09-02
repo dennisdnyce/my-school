@@ -33,10 +33,10 @@ from .models import School_vision
 from .models import School_site_map
 from .models import School_library
 from .models import School_dining_hall
-from .models import Form_one_classes
-from .models import Form_two_classes
-from .models import Form_three_classes
-from .models import Form_four_classes
+from .models import School_form_one_classes
+from .models import School_form_two_classes
+from .models import School_form_three_classes
+from .models import School_form_four_classes
 from .models import School_transport
 from .models import School_physics_lab
 from .models import School_chemistry_lab
@@ -98,10 +98,10 @@ admin.site.register(School_vision)
 admin.site.register(School_site_map)
 admin.site.register(School_library)
 admin.site.register(School_dining_hall)
-admin.site.register(Form_one_classes)
-admin.site.register(Form_two_classes)
-admin.site.register(Form_three_classes)
-admin.site.register(Form_four_classes)
+admin.site.register(School_form_one_classes)
+admin.site.register(School_form_two_classes)
+admin.site.register(School_form_three_classes)
+admin.site.register(School_form_four_classes)
 admin.site.register(School_transport)
 admin.site.register(School_physics_lab)
 admin.site.register(School_chemistry_lab)

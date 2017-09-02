@@ -36,10 +36,10 @@ from .models import School_vision
 from .models import School_site_map
 from .models import School_library
 from .models import School_dining_hall
-from .models import Form_one_classes
-from .models import Form_two_classes
-from .models import Form_three_classes
-from .models import Form_four_classes
+from .models import School_form_one_classes
+from .models import School_form_two_classes
+from .models import School_form_three_classes
+from .models import School_form_four_classes
 from .models import School_transport
 from .models import School_physics_lab
 from .models import School_chemistry_lab
@@ -157,10 +157,10 @@ def dininghall(request):
     return render(request, 'facdine.html', {'dine':dine, 'genem':genem})
 def classrooms(request):
         # this is your new view
-    one = Form_one_classes.objects.all()
-    two = Form_two_classes.objects.filter()
-    three = Form_three_classes.objects.filter()
-    four = Form_four_classes.objects.filter()
+    one = School_form_one_classes.objects.all()
+    two = School_form_two_classes.objects.filter()
+    three = School_form_three_classes.objects.filter()
+    four = School_form_four_classes.objects.filter()
     genen = School_general_information.objects.filter()
     return render(request, 'facclass.html', {'one':one, 'two':two, 'three':three, 'four':four, 'genen':genen})
 def transport(request):

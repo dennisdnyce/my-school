@@ -42,9 +42,12 @@
 									<div id="fb-root"></div>
 									<div class="w3-agile-news-text">
 										{% for school_general_information in con %}
-																				<p><h4><u>School Postal Address</u></h4>:<h2>{{ school_general_information.school_address }}</h2></p><br/>
-																				<p><h4><u>School Email(s)</u></h4>:<h2>{{ school_general_information.school_emailaddress }}</h2></p><br/>
-																				<p><h4><u>School Phone Number(s)</u></h4>:<h2>{{ school_general_information.school_phone_number }}</h2></p><br/>
+																				<p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><u>School Postal Address</u></p>
+                                        <p style="font-weight:bold; opacity:; font-size:22px; color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_general_information.school_address }}</p>
+																				<p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><u>School Email(s)</u></p>
+                                        <p style="font-weight:bold; opacity:; font-size:22px; color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_general_information.school_emailaddress }}</p>
+																				<p style="font-weight:bold; opacity:; font-size:20px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><u>School Phone Number(s)</u></p>
+                                        <p style="font-weight:bold; opacity:; font-size:22px; color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_general_information.school_phone_number }}</p>
 										{% endfor %}
 									</div>
 								</div>

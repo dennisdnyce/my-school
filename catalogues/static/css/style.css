@@ -373,7 +373,7 @@ p.fexi_header_para1 a i {
 /*-- //Latest-tv-series --*/
 /*-- footer --*/
 .footer{
-	background:#212121;
+	background:#1da1f2;
 	padding:4em 0;
 }
 .w3ls_footer_grid_left1{
@@ -423,7 +423,8 @@ p.fexi_header_para1 a i {
 	margin-bottom:2em;
 }
 .w3ls_footer_grid1_left p{
-	color:#999;
+	color:#000000;
+  font-weight: bolder;
 	line-height:1.8em;
 }
 .w3ls_footer_grid1_left p a{
@@ -431,7 +432,7 @@ p.fexi_header_para1 a i {
 	text-decoration:none;
 }
 .w3ls_footer_grid1_left p a:hover{
-	color:#1da1f2;
+	color:#000000;
 }
 .w3ls_footer_grid1_right ul li{
 	display:inline-block;
@@ -443,7 +444,7 @@ p.fexi_header_para1 a i {
 	text-transform:uppercase;
 }
 .w3ls_footer_grid1_right ul li a:hover{
-	color:#1da1f2;
+	color:#000000;
 }
 .w3ls_footer_grid_right a{
 	display: block;

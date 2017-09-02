@@ -582,7 +582,7 @@ class School_dining_hall(models.Model):
        def __str__(self):
            return self.text
 
-class Form_one_classes(models.Model):
+class School_form_one_classes(models.Model):
     author = models.ForeignKey('auth.User')
     text = models.TextField()
     photo = models.FileField(upload_to='uploads/')
@@ -598,7 +598,7 @@ class Form_one_classes(models.Model):
     def __str__(self):
         return self.text
 
-class Form_two_classes(models.Model):
+class School_form_two_classes(models.Model):
     author = models.ForeignKey('auth.User')
     text = models.TextField()
     photo = models.FileField(upload_to='uploads/')
@@ -614,7 +614,7 @@ class Form_two_classes(models.Model):
     def __str__(self):
         return self.text
 
-class Form_three_classes(models.Model):
+class School_form_three_classes(models.Model):
     author = models.ForeignKey('auth.User')
     text = models.TextField()
     photo = models.FileField(upload_to='uploads/')
@@ -630,7 +630,7 @@ class Form_three_classes(models.Model):
     def __str__(self):
         return self.text
 
-class Form_four_classes(models.Model):
+class School_form_four_classes(models.Model):
     author = models.ForeignKey('auth.User')
     text = models.TextField()
     photo = models.FileField(upload_to='uploads/')
@@ -846,8 +846,8 @@ class School_general_information(models.Model):
     mail_icon = models.FileField(upload_to='uploads/', null=True)
     current_year = models.IntegerField(default=2007)
     school_address = models.TextField()
-    school_emailaddress = models.EmailField(max_length=70,blank=True)
-    school_phone_number = models.CharField(max_length=15)
+    school_emailaddress = models.CharField(max_length=200)
+    school_phone_number = models.CharField(max_length=200)
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
