@@ -310,7 +310,8 @@ def search(request):
      ptwonews = Form_two_news_portal.objects.filter(news_title__icontains=q)
      pthreenews = Form_three_news_portal.objects.filter(news_title__icontains=q)
      pfournews = Form_four_news_portal.objects.filter(news_title__icontains=q)
-     return render(request, 'search_results.html', {'ponenews':ponenews, 'ptwonews':ptwonews, 'pthreenews':pthreenews, 'pfournews':pfournews, 'admnews':admnews, 'scorer':scorer, 'updated':updated, 'query':q})
+     alumnews = School_alumnae.objects.filter(name__icontains=q)
+     return render(request, 'search_results.html', {'alumnews':alumnews, 'ponenews':ponenews, 'ptwonews':ptwonews, 'pthreenews':pthreenews, 'pfournews':pfournews, 'admnews':admnews, 'scorer':scorer, 'updated':updated, 'query':q})
 
  else:
      return HttpResponse('Please submit a search term.')

@@ -92,6 +92,15 @@
             </ul>
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
 
+            {% elif alumnews %}
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Found {{ alumnews|length }} result{{ alumnews|pluralize }}.</p></center>
+            <ul style="list-style-type: none;">
+                {% for school_alumnae in alumnews %}
+                <center><li style="opacity:0.8; font-size:35px; color:#000000; text-decoration:none">{{ school_alumnae.name }}</li></center>
+                {% endfor %}
+            </ul>
+            <center><p style="opacity:0.8; font-size:20px; color:#000000;">Check the students' tab for more information on the query</p></center>
+
         {% else %}
             <center><p style="opacity:0.8; font-size:20px; color:#000000;">No results matched your search criteria.</p></center>
         {% endif %}
