@@ -70,7 +70,7 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^corevalues/$', views.corevalues, name='corevalues'),
 
-    url(r'^search/$', views.search),
+    url(r'^search/$', views.search, name='search'),
 
     url(r'^admin/', admin.site.urls),
 
