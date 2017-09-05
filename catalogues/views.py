@@ -18,7 +18,6 @@ from .models import School_physics_department
 from .models import School_cre_department
 from .models import School_history_department
 from .models import School_geography_department
-from .models import School_technical_department
 from .models import School_boarding_department
 from .models import School_games_department
 from .models import School_guiding_and_counseling_department
@@ -65,6 +64,10 @@ from .models import School_rules
 from .models import School_anthem
 from .models import School_performance
 from .models import School_peace_club
+from .models import School_computer_studies_department
+from .models import School_business_studies_department
+from .models import School_homescience_department
+from .models import School_agriculture_department
 # Create your views here.
 def index(request):
     # this is your new view
@@ -127,9 +130,12 @@ def mathematics(request):
     return render(request, 'depmath.html', {'maths':maths, 'geneh':geneh})
 def technicals(request):
         # this is your new view
-    tech = School_technical_department.objects.all()
+    tech = School_computer_studies_department.objects.all()
+    techa = School_business_studies_department.objects.all()
+    techb = School_homescience_department.objects.all()
+    techc = School_agriculture_department.objects.all()
     genei = School_general_information.objects.filter()
-    return render(request, 'deptech.html', {'tech':tech, 'genei':genei})
+    return render(request, 'deptech.html', {'tech':tech, 'techa':techa, 'techb':techb, 'techc':techc, 'genei':genei})
 
 
 def bakery(request):

@@ -274,11 +274,62 @@ class School_geography_department(models.Model):
     def __str__(self):
         return self.name
 
-class School_technical_department(models.Model):
+class School_computer_studies_department(models.Model):
     author = models.ForeignKey('auth.User')
-    name = models.CharField(max_length=200)
-    few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    name = models.CharField(max_length=200, null=True)
+    few_words = models.TextField(null=True)
+    photo = models.FileField(upload_to='uploads/', null=True)
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_business_studies_department(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200, null=True)
+    few_words = models.TextField(null=True)
+    photo = models.FileField(upload_to='uploads/', null=True)
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_homescience_department(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200, null=True)
+    few_words = models.TextField(null=True)
+    photo = models.FileField(upload_to='uploads/', null=True)
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_agriculture_department(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200, null=True)
+    few_words = models.TextField(null=True)
+    photo = models.FileField(upload_to='uploads/', null=True)
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(

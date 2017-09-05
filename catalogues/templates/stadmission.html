@@ -43,7 +43,7 @@
 									<div >
 										{% for school_admission in admi %}
 
-																				<p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">published: <b>{{ school_admission.created_date }}</b></p><br/>
+																				<p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">published: <b>{{ school_admission.created_date }}</b></p>
 																				<p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong><u>{{ school_admission.news_title }}</u></strong></p><br/>
 																				<p style="opacity:0.8; font-size:17px; width:100%; font-color:#ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_admission.news_description|safe }}</p><br/>
 										{% endfor %}

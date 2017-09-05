@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block logo %}
    {% for school_general_information in genec %}
    <a href="{% url 'home' %}"><img class="welcome" src="{{ school_general_information.school_logo.url }}" height="150" width="150" alt=" "></a>

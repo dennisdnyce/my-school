@@ -15,7 +15,6 @@ from .models import School_physics_department
 from .models import School_cre_department
 from .models import School_history_department
 from .models import School_geography_department
-from .models import School_technical_department
 from .models import School_boarding_department
 from .models import School_games_department
 from .models import School_guiding_and_counseling_department
@@ -62,6 +61,10 @@ from .models import School_core_values
 from .models import School_anthem
 from .models import School_performance
 from .models import School_peace_club
+from .models import School_computer_studies_department
+from .models import School_business_studies_department
+from .models import School_homescience_department
+from .models import School_agriculture_department
 
 # Register your models here.
 admin.site.register(School_photo_gallery)
@@ -80,7 +83,6 @@ admin.site.register(School_physics_department)
 admin.site.register(School_cre_department)
 admin.site.register(School_history_department)
 admin.site.register(School_geography_department)
-admin.site.register(School_technical_department)
 admin.site.register(School_boarding_department)
 admin.site.register(School_games_department)
 admin.site.register(School_guiding_and_counseling_department)
@@ -127,3 +129,7 @@ admin.site.register(School_core_values)
 admin.site.register(School_anthem)
 admin.site.register(School_performance)
 admin.site.register(School_peace_club)
+admin.site.register(School_computer_studies_department)
+admin.site.register(School_business_studies_department)
+admin.site.register(School_homescience_department)
+admin.site.register(School_agriculture_department)
