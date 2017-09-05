@@ -9,7 +9,7 @@
 {% block general_head %}
         {% for school_general_information in genero %}
         <ul>
-        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number }}</strong></li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number|safe }}</strong></li>
         <li><img src="{{ school_general_information.mail_icon.url }}" height="20" width="20" alt=" ">&emsp; <strong>{{ school_general_information.school_emailaddress }}</strong></li>
         </ul>
         {% endfor %}
@@ -47,8 +47,8 @@
           <div class="w3-agile-news-text">
 	        <br/><br/>
 	        <h2><strong>{{ school_alumnae.name }}</strong></h2><br/>
-	        <h4><b><u>{{ school_alumnae.achievement }}</u>,</b></h4><br/>
-	        <p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_alumnae.few_words }}</p><br/>
+	        <h4><b><u>{{ school_alumnae.achievement|safe }}</u>,</b></h4><br/>
+	        <p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_alumnae.few_words }}</p><br/><br/>
           </div>
           {% endfor %}
 									</div>

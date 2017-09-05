@@ -9,7 +9,7 @@
 {% block general_head %}
         {% for school_general_information in genec %}
         <ul>
-        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number }}</strong></li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number|safe }}</strong></li>
         <li><img src="{{ school_general_information.mail_icon.url }}" height="20" width="20" alt=" ">&emsp; <strong>{{ school_general_information.school_emailaddress }}</strong></li>
         </ul>
         {% endfor %}
@@ -46,7 +46,7 @@
 									<div class="w3-agile-news-text">
 										<br/>
 										<h5><b>{{ school_chemistry_department.name }},</b></h5><br/>
-										<p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_chemistry_department.few_words }}</p><br/>
+										<p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_chemistry_department.few_words|safe }}</p><br/>
 									</div>
                   {% endfor %}
 								</div>

@@ -9,7 +9,7 @@
 {% block general_head %}
         {% for school_general_information in genel %}
         <ul>
-        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number }}</strong></li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number|safe }}</strong></li>
         <li><img src="{{ school_general_information.mail_icon.url }}" height="20" width="20" alt=" ">&emsp; <strong>{{ school_general_information.school_emailaddress }}</strong></li>
         </ul>
         {% endfor %}
@@ -45,7 +45,7 @@
 									<img src="{{ school_physics_lab.photo.url }}" width="100%" height="auto" alt="" />
 									<div id="fb-root"></div>
 									<div class="w3-agile-news-text">
-										<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_physics_lab.text }}</p><br/>
+										<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_physics_lab.text|safe }}</p><br/>
 									</div>
                   {% endfor %}
 								</div>
@@ -60,7 +60,7 @@
 								<img src="{{ school_chemistry_lab.photo.url }}" width="100%" height="auto" alt="" />
 								<div id="fb-root"></div>
 								<div class="w3-agile-news-text">
-									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_chemistry_lab.text }}</p>
+									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_chemistry_lab.text|safe }}</p>
 								</div>
                 {% endfor %}
 							</div>
@@ -74,7 +74,7 @@
 								<img src="{{ school_biology_lab.photo.url }}" width="100%" height="auto" alt="" />
 								<div id="fb-root"></div>
 								<div class="w3-agile-news-text">
-									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_biology_lab.text }}</p>
+									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_biology_lab.text|safe }}</p>
 								</div>
                 {% endfor %}
 							</div>
@@ -88,7 +88,7 @@
 								<img src="{{ school_computer_lab.photo.url }}" width="100%" height="auto" alt="" />
 								<div id="fb-root"></div>
 								<div class="w3-agile-news-text">
-									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_computer_lab.text }}</p>
+									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_computer_lab.text|safe }}</p>
 								</div>
                 {% endfor %}
 							</div>
