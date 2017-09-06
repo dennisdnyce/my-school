@@ -31,60 +31,26 @@
 		<div class="container">
 			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 				<ul id="myTab" class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Christian Religious Education</a></li>
-					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">History</a></li>
-					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Geography</a></li>
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">The Head of Humanities</a></li>
 				</ul>
 				<div id="myTabContent" class="tab-content">
 					<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
 						<div class="w3_agile_featured_movies">
 							<div class="wthree-news-left">
 								<div class="wthree-news-left-img">
-                  {% for school_cre_department in cre %}
-									<img src="{{ school_cre_department.photo.url }}" width="50%" height="auto" alt="" />
+                  {% for school_humanities_department in cre %}
+									<img src="{{ school_humanities_department.photo.url }}" width="50%" height="auto" alt="" />
 									<div id="fb-root"></div>
 									<div class="w3-agile-news-text">
 										<br/>
-										<h5><b>{{ school_cre_department.name }},</b></h5><br/>
-										<p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_cre_department.few_words|safe }}</p><br/>
+										<h5><b>{{ school_humanities_department.name }},</b></h5><br/>
+										<p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_humanities_department.few_words|safe }}</p><br/>
 									</div>
                  {% endfor %}
 								</div>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-						<div class="wthree-news-left">
-							<div class="wthree-news-left-img">
-                {% for school_history_department in hist %}
-								<img src="{{ school_history_department.photo.url }}" width="50%" height="auto" alt="" />
-								<div id="fb-root"></div>
-								<div class="w3-agile-news-text">
-									<br/>
-									<h5><b>{{ school_history_department.name }},</b></h5><br/>
-									<p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_history_department.few_words }}</p><br/>
-								</div>
-                {% endfor %}
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="rating" aria-labelledby="rating-tab">
-						<div class="wthree-news-left">
-							<div class="wthree-news-left-img">
-                {% for school_geography_department in geo %}
-								<img src="{{ school_geography_department.photo.url }}" width="50%" height="auto" alt="" />
-								<div id="fb-root"></div>
-								<div class="w3-agile-news-text">
-									<br/>
-									<h5><b>{{ school_geography_department.name }},</b></h5><br/>
-									<p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_geography_department.few_words }}</p><br/>
-								</div>
-                {% endfor %}
-							</div>
-						</div>
-						<div class="clearfix"> </div>
 					</div>
 				</div>
 			</div>

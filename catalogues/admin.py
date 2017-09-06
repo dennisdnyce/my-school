@@ -5,16 +5,10 @@ from .models import School_pta_chairperson
 from .models import School_principal
 from .models import School_dp_academics
 from .models import School_dp_admin
-from .models import School_english_department
-from .models import School_kiswahili_department
-from .models import School_foreignlanguages_department
+from .models import School_languages_department
 from .models import School_math_department
-from .models import School_chemistry_department
-from .models import School_biology_department
-from .models import School_physics_department
-from .models import School_cre_department
-from .models import School_history_department
-from .models import School_geography_department
+from .models import School_sciences_department
+from .models import School_humanities_department
 from .models import School_boarding_department
 from .models import School_games_department
 from .models import School_guiding_and_counseling_department
@@ -61,10 +55,7 @@ from .models import School_core_values
 from .models import School_anthem
 from .models import School_performance
 from .models import School_peace_club
-from .models import School_computer_studies_department
-from .models import School_business_studies_department
-from .models import School_homescience_department
-from .models import School_agriculture_department
+from .models import School_technicals_department
 
 # Register your models here.
 admin.site.register(School_photo_gallery)
@@ -73,16 +64,10 @@ admin.site.register(School_pta_chairperson)
 admin.site.register(School_principal)
 admin.site.register(School_dp_academics)
 admin.site.register(School_dp_admin)
-admin.site.register(School_english_department)
-admin.site.register(School_kiswahili_department)
-admin.site.register(School_foreignlanguages_department)
+admin.site.register(School_languages_department)
 admin.site.register(School_math_department)
-admin.site.register(School_chemistry_department)
-admin.site.register(School_biology_department)
-admin.site.register(School_physics_department)
-admin.site.register(School_cre_department)
-admin.site.register(School_history_department)
-admin.site.register(School_geography_department)
+admin.site.register(School_sciences_department)
+admin.site.register(School_humanities_department)
 admin.site.register(School_boarding_department)
 admin.site.register(School_games_department)
 admin.site.register(School_guiding_and_counseling_department)
@@ -129,7 +114,4 @@ admin.site.register(School_core_values)
 admin.site.register(School_anthem)
 admin.site.register(School_performance)
 admin.site.register(School_peace_club)
-admin.site.register(School_computer_studies_department)
-admin.site.register(School_business_studies_department)
-admin.site.register(School_homescience_department)
-admin.site.register(School_agriculture_department)
+admin.site.register(School_technicals_department)

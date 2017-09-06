@@ -8,16 +8,10 @@ from .models import School_pta_chairperson
 from .models import School_principal
 from .models import School_dp_academics
 from .models import School_dp_admin
-from .models import School_english_department
-from .models import School_kiswahili_department
-from .models import School_foreignlanguages_department
+from .models import School_languages_department
 from .models import School_math_department
-from .models import School_chemistry_department
-from .models import School_biology_department
-from .models import School_physics_department
-from .models import School_cre_department
-from .models import School_history_department
-from .models import School_geography_department
+from .models import School_sciences_department
+from .models import School_humanities_department
 from .models import School_boarding_department
 from .models import School_games_department
 from .models import School_guiding_and_counseling_department
@@ -64,10 +58,7 @@ from .models import School_rules
 from .models import School_anthem
 from .models import School_performance
 from .models import School_peace_club
-from .models import School_computer_studies_department
-from .models import School_business_studies_department
-from .models import School_homescience_department
-from .models import School_agriculture_department
+from .models import School_technicals_department
 # Create your views here.
 def index(request):
     # this is your new view
@@ -89,18 +80,14 @@ def management(request):
     return render(request, 'management.html', {'bogchair':bogchair, 'ptachair':ptachair, 'principal':principal, 'dpacademics':dpacademics, 'dpadmin':dpadmin, 'genea':genea})
 def languages(request):
         # this is your new view
-    english = School_english_department.objects.all()
-    kiswahili = School_kiswahili_department.objects.filter()
-    foreign = School_foreignlanguages_department.objects.filter()
+    english = School_languages_department.objects.all()
     geneb = School_general_information.objects.filter()
-    return render(request, 'deplang.html', {'english':english, 'kiswahili':kiswahili, 'foreign':foreign, 'geneb':geneb})
+    return render(request, 'deplang.html', {'english':english, 'geneb':geneb})
 def sciences(request):
         # this is your new view
-    chemistry = School_chemistry_department.objects.all()
-    biology = School_biology_department.objects.filter()
-    physics = School_physics_department.objects.filter()
+    chemistry = School_sciences_department.objects.all()
     genec = School_general_information.objects.filter()
-    return render(request, 'depscie.html', {'chemistry':chemistry, 'biology':biology, 'physics':physics, 'genec':genec})
+    return render(request, 'depscie.html', {'chemistry':chemistry, 'genec':genec})
 def boarding(request):
         # this is your new view
     board = School_boarding_department.objects.all()
@@ -118,11 +105,9 @@ def guidance(request):
     return render(request, 'depguide.html', {'guide':guide, 'genef':genef})
 def humanities(request):
         # this is your new view
-    cre = School_cre_department.objects.all()
-    geo = School_geography_department.objects.filter()
-    hist = School_history_department.objects.filter()
+    cre = School_humanities_department.objects.all()
     geneg = School_general_information.objects.filter()
-    return render(request, 'dephuman.html', {'cre':cre, 'geo':geo, 'hist':hist, 'geneg':geneg})
+    return render(request, 'dephuman.html', {'cre':cre, 'geneg':geneg})
 def mathematics(request):
         # this is your new view
     maths = School_math_department.objects.all()
@@ -130,12 +115,9 @@ def mathematics(request):
     return render(request, 'depmath.html', {'maths':maths, 'geneh':geneh})
 def technicals(request):
         # this is your new view
-    tech = School_computer_studies_department.objects.all()
-    techa = School_business_studies_department.objects.all()
-    techb = School_homescience_department.objects.all()
-    techc = School_agriculture_department.objects.all()
+    tech = School_technicals_department.objects.all()
     genei = School_general_information.objects.filter()
-    return render(request, 'deptech.html', {'tech':tech, 'techa':techa, 'techb':techb, 'techc':techc, 'genei':genei})
+    return render(request, 'deptech.html', {'tech':tech, 'genei':genei})
 
 
 def bakery(request):

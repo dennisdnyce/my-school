@@ -31,78 +31,26 @@
 		<div class="container">
 			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 				<ul id="myTab" class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Computer Studies</a></li>
-          <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Business Studies</a></li>
-					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Homescience</a></li>
-					<li role="presentation"><a href="#imdb" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">Agriculture</a></li>
-
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">The Head of Technicals</a></li>
 				</ul>
         <div id="myTabContent" class="tab-content">
 					<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
 						<div class="w3_agile_featured_movies">
-              {% for school_computer_studies_department in tech %}
+              {% for school_technicals_department in tech %}
 							<div class="wthree-news-left">
 								<div class="wthree-news-left-img">
-									<img src="{{ school_computer_studies_department.photo.url }}" width="50%" height="auto" alt="" />
+									<img src="{{ school_technicals_department.photo.url }}" width="50%" height="auto" alt="" />
 									<div id="fb-root"></div>
 									<div class="w3-agile-news-text">
                     <br/>
-										<h5><b>{{ school_computer_studies_department.name }},</b></h5><br/>
-										<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:#ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; ">{{ school_computer_studies_department.few_words|safe }}</p>
+										<h5><b>{{ school_technicals_department.name }},</b></h5>
+										<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:#ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; ">{{ school_technicals_department.few_words|safe }}</p>
 									</div>
 								</div>
 							</div>
               {% endfor %}
 							<div class="clearfix"> </div>
 						</div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-            {% for school_business_studies_department in techa %}
-						<div class="wthree-news-left">
-							<div class="wthree-news-left-img">
-								<img src="{{ school_business_studies_department.photo.url }}" width="50%" height="auto" alt="" />
-								<div id="fb-root"></div>
-								<div class="w3-agile-news-text">
-                  <br/>
-                  <h5><b>{{ school_business_studies_department.name }},</b></h5><br/>
-									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_business_studies_department.few_words|safe }}</p>
-								</div>
-							</div>
-						</div>
-            {% endfor %}
-						<div class="clearfix"> </div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="rating" aria-labelledby="rating-tab">
-            {% for school_homescience_department in techb %}
-						<div class="wthree-news-left">
-							<div class="wthree-news-left-img">
-								<img src="{{ school_homescience_department.photo.url }}" width="50%" height="auto" alt="" />
-								<div id="fb-root"></div>
-								<div class="w3-agile-news-text">
-                  <br/>
-                  <h5><b>{{ school_homescience_department.name }},</b></h5><br/>
-									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_homescience_department.few_words|safe }}</p>
-								</div>
-							</div>
-						</div>
-            {% endfor %}
-						<div class="clearfix"> </div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="imdb" aria-labelledby="imdb-tab">
-            {% for school_agriculture_department in techc %}
-						<div class="wthree-news-left">
-							<div class="wthree-news-left-img">
-								<img src="{{ school_agriculture_department.photo.url }}" width="50%" height="auto" alt="" />
-								<div id="fb-root"></div>
-								<div class="w3-agile-news-text">
-                  <br/>
-                  <h5><b>{{ school_agriculture_department.name }},</b></h5><br/>
-									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_agriculture_department.few_words|safe }}</p>
-								</div>
-							</div>
-						</div>
-            {% endfor %}
-						<div class="clearfix"> </div>
 					</div>
 				</div>
 			</div>
