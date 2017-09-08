@@ -42,7 +42,8 @@
 									<div id="fb-root"></div>
 									<div class="w3-agile-news-text">
     {% for school_documents_downloads in down %}
-		<p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_documents_downloads.document_name }}</strong>&emsp;<strong>----></strong>&emsp;<a href="{{ school_documents_downloads.document_file.url }}">download</a></p>
+    <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">posted: <b>{{ school_documents_downloads.created_date }}</b></p>
+		<p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_documents_downloads.document_name }}</strong>&emsp;<strong>----></strong>&emsp;<a href="{{ school_documents_downloads.document_file.url }}">download</a></p><br/>
     {% endfor %}
 									</div>
 								</div>
