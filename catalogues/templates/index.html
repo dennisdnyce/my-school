@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block logo %}
    {% for school_general_information in general %}
    <a href="{% url 'home' %}"><img class="welcome" src="{{ school_general_information.school_logo.url }}" height="150" width="150" alt=" "></a>
@@ -79,77 +78,32 @@
 {% endblock %}
 
 {% block home_content %}
-		<h4 class="latest-text w3_latest_text"><strong>About NjoNjo Girls</strong></h4>
-		<div class="container">
-			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-				<ul id="myTab" class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">School History</a></li>
-					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">School Mission</a></li>
-					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">School Vision</a></li>
-					<li role="presentation"><a href="#imdb" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">Site Map</a></li>
-				</ul>
-				<div id="myTabContent" class="tab-content">
-					<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
-						<div class="w3_agile_featured_movies">
-              {% for school_history in history %}
-							<div class="wthree-news-left">
-								<div class="wthree-news-left-img">
-									<img src="{{ school_history.photo.url }}" width="100%" height="auto" alt="" />
-									<div id="fb-root"></div>
-									<div class="w3-agile-news-text">
-										<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:#ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; ">{{ school_history.text|safe }}</p>
-									</div>
-								</div>
-							</div>
+		<h4 class="latest-text w3_latest_text"><strong>Welcome to NjoNjo Girls High School</strong></h4>
+    <div class="container">
+      <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+        <ul id="myTab" class="nav nav-tabs" role="tablist">
+          <li class="active" role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">School Site Map</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+          <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+            <div class="w3_agile_featured_movies">
+              {% for school_site_map in sitemap %}
+              <div class="wthree-news-left">
+                <div class="wthree-news-left-img">
+                  <img src="{{ school_site_map.photo.url }}" width="100%" height="auto" alt="" />
+                  <div id="fb-root"></div>
+                  <div class="w3-agile-news-text">
+                    <br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:#ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; ">{{ school_site_map.text|safe }}</p>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-            {% for school_mission in mission %}
-						<div class="wthree-news-left">
-							<div class="wthree-news-left-img">
-								<img src="{{ school_mission.photo.url }}" width="100%" height="auto" alt="" />
-								<div id="fb-root"></div>
-								<div class="w3-agile-news-text">
-									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_mission.text|safe }}</p>
-								</div>
-							</div>
-						</div>
-            {% endfor %}
-						<div class="clearfix"> </div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="rating" aria-labelledby="rating-tab">
-            {% for school_vision in vision %}
-						<div class="wthree-news-left">
-							<div class="wthree-news-left-img">
-								<img src="{{ school_vision.photo.url }}" width="100%" height="auto" alt="" />
-								<div id="fb-root"></div>
-								<div class="w3-agile-news-text">
-									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_vision.text|safe }}</p>
-								</div>
-							</div>
-						</div>
-            {% endfor %}
-						<div class="clearfix"> </div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="imdb" aria-labelledby="imdb-tab">
-            {% for school_site_map in sitemap %}
-						<div class="wthree-news-left">
-							<div class="wthree-news-left-img">
-								<img src="{{ school_site_map.photo.url }}" width="100%" height="auto" alt="" />
-								<div id="fb-root"></div>
-								<div class="w3-agile-news-text">
-									<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_site_map.text|safe }}</p>
-								</div>
-							</div>
-						</div>
-            {% endfor %}
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			</div>
-		</div>
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 {% endblock %}
 {% block general_foot %}
    {% for school_general_information in general %}

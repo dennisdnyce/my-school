@@ -24,6 +24,9 @@ urlpatterns = [
     url(r'^$', views.index, name='home'),
 
     url(r'^management/$', views.management, name='management'),
+    url(r'^history/$', views.history, name='history'),
+    url(r'^vision/$', views.vision, name='vision'),
+    url(r'^mission/$', views.mission, name='mission'),
 
     url(r'^languages/$', views.languages, name='languages'),
     url(r'^sciences/$', views.sciences, name='sciences'),

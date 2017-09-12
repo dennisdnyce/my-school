@@ -63,12 +63,9 @@ from .models import School_technicals_department
 def index(request):
     # this is your new view
     gallery = School_photo_gallery.objects.all()
-    history = School_history.objects.filter()
-    mission = School_mission.objects.filter()
-    vision = School_vision.objects.filter()
     sitemap = School_site_map.objects.all()
     general = School_general_information.objects.filter()
-    return render(request, 'index.html', {'gallery':gallery, 'history':history, 'mission':mission, 'vision':vision, 'sitemap':sitemap, 'general':general})
+    return render(request, 'index.html', {'gallery':gallery, 'sitemap':sitemap, 'general':general})
 def management(request):
     # this is your new view
     bogchair = School_bog_chairperson.objects.all()
@@ -236,6 +233,23 @@ def performance(request):
     generi = School_general_information.objects.filter()
     return render(request, 'acperformance.html', {'perform':perform, 'generi':generi})
 
+def history(request):
+        # this is your new view
+    history = School_history.objects.filter()
+    generih = School_general_information.objects.filter()
+    return render(request, 'history.html', {'history':history, 'generih':generih})
+
+def vision(request):
+        # this is your new view
+    vision = School_vision.objects.filter()
+    generiv = School_general_information.objects.filter()
+    return render(request, 'vision.html', {'vision':vision, 'generiv':generiv})
+
+def mission(request):
+        # this is your new view
+    mission = School_mission.objects.filter()
+    generim = School_general_information.objects.filter()
+    return render(request, 'mission.html', {'mission':mission, 'generim':generim})
 
 def admission(request):
         # this is your new view
