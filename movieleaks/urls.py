@@ -23,7 +23,11 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     url(r'^$', views.index, name='home'),
 
-    url(r'^management/$', views.management, name='management'),
+    url(r'^bog/$', views.bog, name='bog'),
+    url(r'^pta/$', views.pta, name='pta'),
+    url(r'^principal/$', views.principal, name='principal'),
+    url(r'^deputies/$', views.deputies, name='deputies'),
+
     url(r'^history/$', views.history, name='history'),
     url(r'^vision/$', views.vision, name='vision'),
     url(r'^mission/$', views.mission, name='mission'),
@@ -71,6 +75,10 @@ urlpatterns = [
 
     url(r'^anthem/$', views.anthem, name='anthem'),
     url(r'^contact/$', views.contact, name='contact'),
+    url(r'^email/$', views.email, name='email'),
+    url(r'^address/$', views.address, name='address'),
+    url(r'^telephone/$', views.telephone, name='telephone'),
+    url(r'^website/$', views.website, name='website'),
     url(r'^corevalues/$', views.corevalues, name='corevalues'),
 
     url(r'^search/$', views.search, name='search'),

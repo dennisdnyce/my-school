@@ -744,8 +744,10 @@ class School_general_information(models.Model):
     mail_icon = models.FileField(upload_to='uploads/', null=True)
     current_year = models.IntegerField(default=2007)
     school_address = models.TextField()
+    school_website = models.TextField(null=True)
     school_emailaddress = models.CharField(max_length=200)
     school_phone_number = models.CharField(max_length=200)
+    other_phone_number = models.CharField(max_length=200, null=True)
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(

@@ -66,15 +66,31 @@ def index(request):
     sitemap = School_site_map.objects.all()
     general = School_general_information.objects.filter()
     return render(request, 'index.html', {'gallery':gallery, 'sitemap':sitemap, 'general':general})
-def management(request):
+def bog(request):
     # this is your new view
-    bogchair = School_bog_chairperson.objects.all()
+    bogchair = School_bog_chairperson.objects.filter()
+    genea = School_general_information.objects.filter()
+    return render(request, 'bog.html', {'bogchair':bogchair, 'genea':genea})
+
+def pta(request):
+    # this is your new view
     ptachair = School_pta_chairperson.objects.filter()
+    geneap = School_general_information.objects.filter()
+    return render(request, 'pta.html', {'ptachair':ptachair, 'geneap':geneap})
+
+def principal(request):
+    # this is your new view
     principal = School_principal.objects.filter()
+    genepa = School_general_information.objects.filter()
+    return render(request, 'principal.html', {'principal':principal, 'genepa':genepa})
+
+def deputies(request):
+    # this is your new view
     dpacademics = School_dp_academics.objects.filter()
     dpadmin = School_dp_admin.objects.all()
-    genea = School_general_information.objects.filter()
-    return render(request, 'management.html', {'bogchair':bogchair, 'ptachair':ptachair, 'principal':principal, 'dpacademics':dpacademics, 'dpadmin':dpadmin, 'genea':genea})
+    genead = School_general_information.objects.filter()
+    return render(request, 'deputies.html', {'dpacademics':dpacademics, 'dpadmin':dpadmin, 'genead':genead})
+
 def languages(request):
         # this is your new view
     english = School_languages_department.objects.all()
@@ -295,6 +311,28 @@ def contact(request):
         # this is your new view
     con = School_general_information.objects.all()
     return render(request, 'contact.html', {'con':con})
+
+def website(request):
+        # this is your new view
+    conw = School_general_information.objects.all()
+    return render(request, 'websites.html', {'conw':conw})
+
+def address(request):
+        # this is your new view
+    cona = School_general_information.objects.all()
+    return render(request, 'address.html', {'cona':cona})
+
+def email(request):
+        # this is your new view
+    cone = School_general_information.objects.all()
+    return render(request, 'email.html', {'cone':cone})
+
+def telephone(request):
+        # this is your new view
+    cont = School_general_information.objects.all()
+    return render(request, 'telephone.html', {'cont':cont})    
+
+
 def corevalues(request):
         # this is your new view
     cores = School_core_values.objects.filter()

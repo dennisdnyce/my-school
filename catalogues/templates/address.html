@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
-
 {% block logo %}
-   {% for school_general_information in con %}
+   {% for school_general_information in cona %}
    <a href="{% url 'home' %}"><img class="welcome" src="{{ school_general_information.school_logo.url }}" height="150" width="150" alt=" "></a>
    {% endfor %}
 {% endblock %}
 
 {% block general_head %}
-        {% for school_general_information in con %}
+        {% for school_general_information in cona %}
         <ul>
         <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>{{ school_general_information.school_phone_number|safe }}</strong></li>
         <li><img src="{{ school_general_information.mail_icon.url }}" height="20" width="20" alt=" ">&emsp; <strong>{{ school_general_information.school_emailaddress }}</strong></li>
@@ -18,7 +17,7 @@
 {% block social_links %}
   <nav class="social">
   <ul>
-    {% for school_general_information in con %}
+    {% for school_general_information in cona %}
     <li class="w3_twitter"><a href="{{ school_general_information.school_twitterlink }}" target="_blank">Twitter <i class="fa fa-twitter"></i></a></li>
     <li class="w3_facebook"><a href="{{ school_general_information.school_facebooklink }}" target="_blank">Facebook <i class="fa fa-facebook"></i></a></li>
     {% endfor %}
@@ -41,13 +40,9 @@
 								<div class="wthree-news-left-img">
 									<div id="fb-root"></div>
 									<div class="w3-agile-news-text">
-										{% for school_general_information in con %}
+										{% for school_general_information in cona %}
 																				<p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><u>School Postal Address</u></p>
                                         <p style="font-weight:bold; opacity:; font-size:22px; color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_general_information.school_address|safe }}</p>
-																				<p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><u>School Email(s)</u></p>
-                                        <p style="font-weight:bold; opacity:; font-size:22px; color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_general_information.school_emailaddress|safe }}</p>
-																				<p style="font-weight:bold; opacity:; font-size:20px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><u>School Phone Number(s)</u></p>
-                                        <p style="font-weight:bold; opacity:; font-size:22px; color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_general_information.other_phone_number|safe }}</p>
 										{% endfor %}
 									</div>
 								</div>
@@ -60,7 +55,7 @@
 		</div>
 {% endblock %}
 {% block general_foot %}
-   {% for school_general_information in con %}
+   {% for school_general_information in cona %}
  <p>Copyright &copy; {{ school_general_information.current_year }} <br/>NjoNjo Girls High School. {{ school_general_information.school_address }}<br/> All Rights Reserved. Designed by <a href="http://www.peerware.co.ke" target="_blank">PHS</a></p>
    {% endfor %}
 {% endblock %}

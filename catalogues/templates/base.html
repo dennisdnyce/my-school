@@ -80,6 +80,55 @@ th, td {
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
+
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
 </style>
 </head>
 
@@ -123,143 +172,170 @@ tr:nth-child(even){background-color: #f2f2f2}
 	</script>
 <!-- //bootstrap-pop-up -->
 <!-- nav -->
-	<div class="movies_nav">
-		<div class="container">
-			<nav class="navbar navbar-default">
-				<div class="navbar-header navbar-left">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-					<nav>
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="{% url 'home' %}">Home</a></li>
 
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<li>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'management' %}">Management</a></li>
-											<li><a href="{% url 'history' %}">History</a></li>
-											<li><a href="{% url 'vision' %}">Vision</a></li>
-											<li><a href="{% url 'mission' %}">Mission</a></li>
-										</ul>
-									</div>
-
-									<div class="clearfix"></div>
-									</li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<li>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'languages' %}">Languages</a></li>
-											<li><a href="{% url 'mathematics' %}">Mathematics</a></li>
-											<li><a href="{% url 'sciences' %}">Sciences</a></li>
-											<li><a href="{% url 'humanities' %}">Humanities</a></li>
-											<li><a href="{% url 'technicals' %}">Technicals</a></li>
-											<li><a href="{% url 'boarding' %}">Boarding</a></li>
-											<li><a href="{% url 'guidance' %}">Guiding and Councelling</a></li>
-											<li><a href="{% url 'games' %}">Games</a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-									</li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Achievements<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<li>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'performance' %}">K.C.S.E Performance Trends</a></li>
-										</ul>
-									</div>
-
-									<div class="clearfix"></div>
-									</li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Facilities<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<li>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'library' %}">Library</a></li>
-											<li><a href="{% url 'laboratories' %}">Laboratories</a></li>
-											<li><a href="{% url 'dininghall' %}">Dining Hall</a></li>
-											<li><a href="{% url 'classrooms' %}">Classrooms</a></li>
-											<li><a href="{% url 'transport' %}">Transport</a></li>
-											<li><a href="{% url 'schoolfence' %}">School Fence</a></li>
-											<li><a href="{% url 'forest' %}">Forest</a></li>
-											<li><a href="{% url 'bakery' %}">Bakery</a></li>
-											<li><a href="{% url 'carpark' %}">Car Park</a></li>
-											<li><a href="{% url 'beautification' %}">Beautification</a></li>
-											<li><a href="{% url 'generator' %}">Generator</a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-									</li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Co-Curricular<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<li>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'drama' %}">Drama</a></li>
-											<li><a href="{% url 'music' %}">Music</a></li>
-											<li><a href="{% url 'sports' %}">Sports</a></li>
-											<li><a href="{% url 'christianunion' %}">Christian Union</a></li>
-											<li><a href="{% url 'muslimstudents' %}">Muslim Students</a></li>
-											<li><a href="{% url 'journalism' %}">Journalism</a></li>
-											<li><a href="{% url 'debate' %}">Debate</a></li>
-											<li><a href="{% url 'scienceengineering' %}">Science Engineering</a></li>
-											<li><a href="{% url 'peace' %}">Peace club</a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-									</li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Students<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<li>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'admission' %}">Admission</a></li>
-											<li><a href="{% url 'rules' %}">Rules</a></li>
-											<li><a href="{% url 'portal' %}">student portal</a></li>
-											<li><a href="{% url 'downloads' %}">Downloads</a></li>
-											<li><a href="{% url 'updates' %}">updates</a></li>
-											<li><a href="{% url 'alumnae' %}">Alumnae</a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</nav>
-		</div>
-	</div>
 <!-- //nav -->
+
+<!-- //naver demo start -->
+
+<div class="movies_nav" role="navigation">
+    <div class="container">
+			<nav class="navbar navbar-default">
+        <div class="navbar-header navbar-left">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Philosophy</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'mission' %}"><i><u>mission</u></i></a></li>
+																<li><a href="{% url 'vision' %}"><i><u>vision</u></i></a></li>
+																<li><a href="{% url 'corevalues' %}"><i><u>core values</u></i></a></li>
+																<li><a href="{% url 'anthem' %}"><i><u>school anthem</u></i></a></li>
+                            </ul>
+                        </li>
+												<li><a href="{% url 'history' %}">Background</a></li>
+												<li class="dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Management</a>
+														<ul class="dropdown-menu">
+																<li><a href="{% url 'bog' %}"><b>BOG</b></a></li>
+																<li><a href="{% url 'pta' %}"><b>PTA</b></a></li>
+																<li class="dropdown-submenu">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration</a>
+																		<ul class="dropdown-menu">
+																			 <li><a href="{% url 'principal' %}"><b>principal</b></a></li>
+																			 <li><a href="{% url 'deputies' %}"><b>deputies</b></a></li>
+																		</ul>
+																</li>
+														</ul>
+												</li>
+												<li class="dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+														<ul class="dropdown-menu">
+																<li><a href="{% url 'address' %}"><i><u>Address</u></i></a></li>
+																<li><a href="{% url 'telephone' %}"><i><u>Telephone</u></i></a></li>
+																<li><a href="{% url 'email' %}"><i><u>email</u></i></a></li>
+																<li><a href="{% url 'website' %}"><i><u>websites</u></i></a></li>
+														</ul>
+												</li>
+                    </ul>
+                </li>
+
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments<b class="caret"></b></a>
+									<ul class="dropdown-menu multi-column columns-3">
+										<li>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="{% url 'languages' %}">Languages</a></li>
+												<li><a href="{% url 'mathematics' %}">Mathematics</a></li>
+												<li><a href="{% url 'sciences' %}">Sciences</a></li>
+												<li><a href="{% url 'humanities' %}">Humanities</a></li>
+												<li><a href="{% url 'technicals' %}">Technicals</a></li>
+												<li><a href="{% url 'boarding' %}">Boarding</a></li>
+												<li><a href="{% url 'guidance' %}">Guiding and Counseling</a></li>
+												<li><a href="{% url 'games' %}">Games</a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Achievements<b class="caret"></b></a>
+									<ul class="dropdown-menu multi-column columns-3">
+										<li>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="{% url 'performance' %}">K.C.S.E Performance Trends</a></li>
+											</ul>
+										</div>
+
+										<div class="clearfix"></div>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Facilities<b class="caret"></b></a>
+									<ul class="dropdown-menu multi-column columns-3">
+										<li>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="{% url 'library' %}">Library</a></li>
+												<li><a href="{% url 'laboratories' %}">Laboratories</a></li>
+												<li><a href="{% url 'dininghall' %}">Dining Hall</a></li>
+												<li><a href="{% url 'classrooms' %}">Classrooms</a></li>
+												<li><a href="{% url 'transport' %}">Transport</a></li>
+												<li><a href="{% url 'schoolfence' %}">School Fence</a></li>
+												<li><a href="{% url 'forest' %}">Forest</a></li>
+												<li><a href="{% url 'bakery' %}">Bakery</a></li>
+												<li><a href="{% url 'carpark' %}">Car Park</a></li>
+												<li><a href="{% url 'beautification' %}">Beautification</a></li>
+												<li><a href="{% url 'generator' %}">Generator</a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Co-Curricular<b class="caret"></b></a>
+									<ul class="dropdown-menu multi-column columns-3">
+										<li>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="{% url 'drama' %}">Drama</a></li>
+												<li><a href="{% url 'music' %}">Music</a></li>
+												<li><a href="{% url 'sports' %}">Sports</a></li>
+												<li><a href="{% url 'christianunion' %}">Christian Union</a></li>
+												<li><a href="{% url 'muslimstudents' %}">Muslim Students</a></li>
+												<li><a href="{% url 'journalism' %}">Journalism</a></li>
+												<li><a href="{% url 'debate' %}">Debate</a></li>
+												<li><a href="{% url 'scienceengineering' %}">Science Engineering</a></li>
+												<li><a href="{% url 'peace' %}">Peace club</a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Students<b class="caret"></b></a>
+									<ul class="dropdown-menu multi-column columns-3">
+										<li>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="{% url 'admission' %}">Admission</a></li>
+												<li><a href="{% url 'rules' %}">Rules</a></li>
+												<li><a href="{% url 'portal' %}">student portal</a></li>
+												<li><a href="{% url 'downloads' %}">Downloads</a></li>
+												<li><a href="{% url 'updates' %}">updates</a></li>
+												<li><a href="{% url 'alumnae' %}">Alumnae</a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+										</li>
+									</ul>
+								</li>
+
+            </ul>
+        </div>
+			</nav><!--/.nav-collapse -->
+    </div>
+</div>
+
+<!-- //naver demo end -->
+
+
 <!-- banner -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 {% block slide_content %}
