@@ -791,6 +791,7 @@ class School_core_values (models.Model):
     core_value_seven = models.CharField(max_length=300)
     core_value_eight = models.CharField(max_length=300)
     core_value_nine = models.CharField(max_length=300)
+    core_value_ten = models.CharField(max_length=300, null=True)
     created_date = models.DateTimeField(
            default=timezone.now)
     published_date = models.DateTimeField(
