@@ -56,6 +56,7 @@ from .models import School_anthem
 from .models import School_performance
 from .models import School_peace_club
 from .models import School_technicals_department
+from .models import School_events_calendar
 
 # Register your models here.
 admin.site.register(School_photo_gallery)
@@ -115,3 +116,4 @@ admin.site.register(School_anthem)
 admin.site.register(School_performance)
 admin.site.register(School_peace_club)
 admin.site.register(School_technicals_department)
+admin.site.register(School_events_calendar)

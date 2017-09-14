@@ -29,18 +29,11 @@ urlpatterns = [
     url(r'^deputies/$', views.deputies, name='deputies'),
 
     url(r'^history/$', views.history, name='history'),
-    url(r'^vision/$', views.vision, name='vision'),
-    url(r'^mission/$', views.mission, name='mission'),
+    url(r'^philosophy/$', views.philosophy, name='philosophy'),
+    url(r'^location/$', views.location, name='location'),
 
-    url(r'^languages/$', views.languages, name='languages'),
-    url(r'^sciences/$', views.sciences, name='sciences'),
-    url(r'^boarding/$', views.boarding, name='boarding'),
-    url(r'^games/$', views.games, name='games'),
-    url(r'^guidance/$', views.guidance, name='guidance'),
-    url(r'^humanities/$', views.humanities, name='humanities'),
-    url(r'^mathematics/$', views.mathematics, name='mathematics'),
-    url(r'^technicals/$', views.technicals, name='technicals'),
-
+    url(r'^hods/$', views.hods, name='hods'),
+    
     url(r'^bakery/$', views.bakery, name='bakery'),
     url(r'^library/$', views.library, name='library'),
     url(r'^laboratories/$', views.laboratories, name='laboratories'),
@@ -75,10 +68,6 @@ urlpatterns = [
 
     url(r'^anthem/$', views.anthem, name='anthem'),
     url(r'^contact/$', views.contact, name='contact'),
-    url(r'^email/$', views.email, name='email'),
-    url(r'^address/$', views.address, name='address'),
-    url(r'^telephone/$', views.telephone, name='telephone'),
-    url(r'^website/$', views.website, name='website'),
     url(r'^corevalues/$', views.corevalues, name='corevalues'),
 
     url(r'^search/$', views.search, name='search'),

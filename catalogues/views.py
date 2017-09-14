@@ -59,13 +59,15 @@ from .models import School_anthem
 from .models import School_performance
 from .models import School_peace_club
 from .models import School_technicals_department
+from .models import School_events_calendar
 # Create your views here.
 def index(request):
     # this is your new view
     gallery = School_photo_gallery.objects.all()
-    sitemap = School_site_map.objects.all()
+    updater = School_updates.objects.all()
+    calendar = School_events_calendar.objects.all()
     general = School_general_information.objects.filter()
-    return render(request, 'index.html', {'gallery':gallery, 'sitemap':sitemap, 'general':general})
+    return render(request, 'index.html', {'gallery':gallery, 'updater':updater, 'calendar':calendar, 'general':general})
 def bog(request):
     # this is your new view
     bogchair = School_bog_chairperson.objects.filter()
@@ -91,46 +93,18 @@ def deputies(request):
     genead = School_general_information.objects.filter()
     return render(request, 'deputies.html', {'dpacademics':dpacademics, 'dpadmin':dpadmin, 'genead':genead})
 
-def languages(request):
+def hods(request):
         # this is your new view
-    english = School_languages_department.objects.all()
-    geneb = School_general_information.objects.filter()
-    return render(request, 'deplang.html', {'english':english, 'geneb':geneb})
-def sciences(request):
-        # this is your new view
-    chemistry = School_sciences_department.objects.all()
-    genec = School_general_information.objects.filter()
-    return render(request, 'depscie.html', {'chemistry':chemistry, 'genec':genec})
-def boarding(request):
-        # this is your new view
+    langues = School_languages_department.objects.all()
+    scies = School_sciences_department.objects.all()
     board = School_boarding_department.objects.all()
-    gened = School_general_information.objects.filter()
-    return render(request, 'depboard.html', {'board':board, 'gened':gened})
-def games(request):
-        # this is your new view
     game = School_games_department.objects.all()
-    genee = School_general_information.objects.filter()
-    return render(request, 'depgame.html', {'game':game,'genee':genee})
-def guidance(request):
-        # this is your new view
     guide = School_guiding_and_counseling_department.objects.all()
-    genef = School_general_information.objects.filter()
-    return render(request, 'depguide.html', {'guide':guide, 'genef':genef})
-def humanities(request):
-        # this is your new view
-    cre = School_humanities_department.objects.all()
-    geneg = School_general_information.objects.filter()
-    return render(request, 'dephuman.html', {'cre':cre, 'geneg':geneg})
-def mathematics(request):
-        # this is your new view
+    hume = School_humanities_department.objects.all()
     maths = School_math_department.objects.all()
-    geneh = School_general_information.objects.filter()
-    return render(request, 'depmath.html', {'maths':maths, 'geneh':geneh})
-def technicals(request):
-        # this is your new view
     tech = School_technicals_department.objects.all()
-    genei = School_general_information.objects.filter()
-    return render(request, 'deptech.html', {'tech':tech, 'genei':genei})
+    geneids = School_general_information.objects.filter()
+    return render(request, 'hods.html', {'langues':langues, 'scies':scies, 'board':board, 'game':game, 'guide':guide, 'hume':hume, 'maths':maths, 'tech':tech, 'geneids':geneids})
 
 
 def bakery(request):
@@ -255,17 +229,21 @@ def history(request):
     generih = School_general_information.objects.filter()
     return render(request, 'history.html', {'history':history, 'generih':generih})
 
-def vision(request):
-        # this is your new view
-    vision = School_vision.objects.filter()
-    generiv = School_general_information.objects.filter()
-    return render(request, 'vision.html', {'vision':vision, 'generiv':generiv})
-
-def mission(request):
+def philosophy(request):
         # this is your new view
     mission = School_mission.objects.filter()
-    generim = School_general_information.objects.filter()
-    return render(request, 'mission.html', {'mission':mission, 'generim':generim})
+    vision = School_vision.objects.filter()
+    coresp = School_core_values.objects.filter()
+    anthp = School_anthem.objects.filter()
+    generiv = School_general_information.objects.filter()
+    return render(request, 'philosophy.html', {'mission':mission, 'vision':vision, 'coresp':coresp, 'anthp':anthp, 'generiv':generiv})
+
+def location(request):
+        # this is your new view
+    sitemap = School_site_map.objects.all()
+    generiloc = School_general_information.objects.filter()
+    return render(request, 'location.html', {'sitemap':sitemap, 'generiloc':generiloc})
+
 
 def admission(request):
         # this is your new view
@@ -311,26 +289,6 @@ def contact(request):
         # this is your new view
     con = School_general_information.objects.all()
     return render(request, 'contact.html', {'con':con})
-
-def website(request):
-        # this is your new view
-    conw = School_general_information.objects.all()
-    return render(request, 'websites.html', {'conw':conw})
-
-def address(request):
-        # this is your new view
-    cona = School_general_information.objects.all()
-    return render(request, 'address.html', {'cona':cona})
-
-def email(request):
-        # this is your new view
-    cone = School_general_information.objects.all()
-    return render(request, 'email.html', {'cone':cone})
-
-def telephone(request):
-        # this is your new view
-    cont = School_general_information.objects.all()
-    return render(request, 'telephone.html', {'cont':cont})    
 
 
 def corevalues(request):

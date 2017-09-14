@@ -129,6 +129,7 @@ tr:nth-child(even){background-color: #f2f2f2}
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
 }
+
 </style>
 </head>
 
@@ -194,69 +195,36 @@ tr:nth-child(even){background-color: #f2f2f2}
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
                     <ul class="dropdown-menu multi-level">
-                        <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Philosophy</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{% url 'mission' %}"><i><u>mission</u></i></a></li>
-																<li><a href="{% url 'vision' %}"><i><u>vision</u></i></a></li>
-																<li><a href="{% url 'corevalues' %}"><i><u>core values</u></i></a></li>
-																<li><a href="{% url 'anthem' %}"><i><u>school anthem</u></i></a></li>
-                            </ul>
-                        </li>
-												<li><a href="{% url 'history' %}">Background</a></li>
+                        <li><a href="{% url 'philosophy' %}">Our Philosophy</a></li>
+												<li><a href="{% url 'location' %}">Location</a></li>
+												<li><a href="{% url 'history' %}">History</a></li>
 												<li class="dropdown-submenu">
 														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Management</a>
 														<ul class="dropdown-menu">
 																<li><a href="{% url 'bog' %}"><b>BOG</b></a></li>
 																<li><a href="{% url 'pta' %}"><b>PTA</b></a></li>
-																<li class="dropdown-submenu">
-																		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration</a>
-																		<ul class="dropdown-menu">
-																			 <li><a href="{% url 'principal' %}"><b>principal</b></a></li>
-																			 <li><a href="{% url 'deputies' %}"><b>deputies</b></a></li>
-																		</ul>
-																</li>
 														</ul>
 												</li>
 												<li class="dropdown-submenu">
-														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration</a>
 														<ul class="dropdown-menu">
-																<li><a href="{% url 'address' %}"><i><u>Address</u></i></a></li>
-																<li><a href="{% url 'telephone' %}"><i><u>Telephone</u></i></a></li>
-																<li><a href="{% url 'email' %}"><i><u>email</u></i></a></li>
-																<li><a href="{% url 'website' %}"><i><u>websites</u></i></a></li>
+															 <li><a href="{% url 'principal' %}"><b>principal</b></a></li>
+															 <li><a href="{% url 'deputies' %}"><b>deputies</b></a></li>
+															 <li><a href="{% url 'hods' %}"><b>HODs</b></a></li>
+															 <li><a href="{% url 'deputies' %}"><b>Teachers</b></a></li>
+															 <li><a href="{% url 'deputies' %}"><b>Council</b></a></li>
 														</ul>
 												</li>
                     </ul>
                 </li>
-
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments<b class="caret"></b></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Performance<b class="caret"></b></a>
 									<ul class="dropdown-menu multi-column columns-3">
 										<li>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'languages' %}">Languages</a></li>
-												<li><a href="{% url 'mathematics' %}">Mathematics</a></li>
-												<li><a href="{% url 'sciences' %}">Sciences</a></li>
-												<li><a href="{% url 'humanities' %}">Humanities</a></li>
-												<li><a href="{% url 'technicals' %}">Technicals</a></li>
-												<li><a href="{% url 'boarding' %}">Boarding</a></li>
-												<li><a href="{% url 'guidance' %}">Guiding and Counseling</a></li>
-												<li><a href="{% url 'games' %}">Games</a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-										</li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Achievements<b class="caret"></b></a>
-									<ul class="dropdown-menu multi-column columns-3">
-										<li>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'performance' %}">K.C.S.E Performance Trends</a></li>
+												<li><a href="{% url 'performance' %}">K.C.S.E</a></li>
+												<li><a href="{% url 'performance' %}">University</a></li>
 											</ul>
 										</div>
 
@@ -265,22 +233,12 @@ tr:nth-child(even){background-color: #f2f2f2}
 									</ul>
 								</li>
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Facilities<b class="caret"></b></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acade<b class="caret"></b></a>
 									<ul class="dropdown-menu multi-column columns-3">
 										<li>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'library' %}">Library</a></li>
-												<li><a href="{% url 'laboratories' %}">Laboratories</a></li>
-												<li><a href="{% url 'dininghall' %}">Dining Hall</a></li>
-												<li><a href="{% url 'classrooms' %}">Classrooms</a></li>
-												<li><a href="{% url 'transport' %}">Transport</a></li>
-												<li><a href="{% url 'schoolfence' %}">School Fence</a></li>
-												<li><a href="{% url 'forest' %}">Forest</a></li>
-												<li><a href="{% url 'bakery' %}">Bakery</a></li>
-												<li><a href="{% url 'carpark' %}">Car Park</a></li>
-												<li><a href="{% url 'beautification' %}">Beautification</a></li>
-												<li><a href="{% url 'generator' %}">Generator</a></li>
+												<li><a href="#">smh</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -309,7 +267,30 @@ tr:nth-child(even){background-color: #f2f2f2}
 									</ul>
 								</li>
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Students<b class="caret"></b></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Facilities<b class="caret"></b></a>
+									<ul class="dropdown-menu multi-column columns-3">
+										<li>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="{% url 'library' %}">Library</a></li>
+												<li><a href="{% url 'laboratories' %}">Laboratories</a></li>
+												<li><a href="{% url 'dininghall' %}">Dining Hall</a></li>
+												<li><a href="{% url 'classrooms' %}">Classrooms</a></li>
+												<li><a href="{% url 'transport' %}">Transport</a></li>
+												<li><a href="{% url 'schoolfence' %}">School Fence</a></li>
+												<li><a href="{% url 'forest' %}">Forest</a></li>
+												<li><a href="{% url 'bakery' %}">Bakery</a></li>
+												<li><a href="{% url 'carpark' %}">Car Park</a></li>
+												<li><a href="{% url 'beautification' %}">Beautification</a></li>
+												<li><a href="{% url 'generator' %}">Generator</a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Alumnae<b class="caret"></b></a>
 									<ul class="dropdown-menu multi-column columns-3">
 										<li>
 										<div class="col-sm-4">
@@ -337,12 +318,13 @@ tr:nth-child(even){background-color: #f2f2f2}
 
 
 <!-- banner -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
 {% block slide_content %}
 {% endblock %}
-</div>
 <!-- //banner -->
 <!-- banner-bottom -->
+
+{% block updates %}
+{% endblock %}
 
 <!-- //banner-bottom -->
 <div class="general_social_icons">

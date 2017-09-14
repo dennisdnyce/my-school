@@ -19,6 +19,33 @@ class School_photo_gallery(models.Model):
     def __str__(self):
         return self.title
 
+class School_events_calendar(models.Model):
+    author = models.ForeignKey('auth.User')
+    title = models.CharField(max_length=300, default="School Events Entries")
+    jan = models.CharField(max_length=250, null=True)
+    feb = models.CharField(max_length=250, null=True)
+    mar = models.CharField(max_length=250, null=True)
+    apr = models.CharField(max_length=250, null=True)
+    may = models.CharField(max_length=250, null=True)
+    jun = models.CharField(max_length=250, null=True)
+    jul = models.CharField(max_length=250, null=True)
+    aug = models.CharField(max_length=250, null=True)
+    sep = models.CharField(max_length=250, null=True)
+    octo = models.CharField(max_length=250, null=True)
+    nov = models.CharField(max_length=250, null=True)
+    dec = models.CharField(max_length=250, null=True)
+    created_date = models.DateTimeField(
+              default=timezone.now)
+    published_date = models.DateTimeField(
+              blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.title
+
 class School_bog_chairperson(models.Model):
     author = models.ForeignKey('auth.User')
     name = models.CharField(max_length=200)
