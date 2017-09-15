@@ -8,13 +8,14 @@ from .models import School_pta_chairperson
 from .models import School_principal
 from .models import School_dp_academics
 from .models import School_dp_admin
-from .models import School_languages_department
-from .models import School_math_department
-from .models import School_sciences_department
-from .models import School_humanities_department
-from .models import School_boarding_department
-from .models import School_games_department
-from .models import School_guiding_and_counseling_department
+from .models import School_languages_hod
+from .models import School_math_hod
+from .models import School_sciences_hod
+from .models import School_humanities_hod
+from .models import School_boarding_hod
+from .models import School_games_hod
+from .models import School_guiding_and_counseling_hod
+from .models import School_technicals_hod
 from .models import School_drama_club
 from .models import School_music_club
 from .models import School_sports_club
@@ -44,22 +45,24 @@ from .models import School_forest
 from .models import School_car_park
 from .models import School_generator
 from .models import School_beautification
-from .models import School_documents_downloads
 from .models import School_general_information
-from .models import Form_one_news_portal
-from .models import Form_two_news_portal
-from .models import Form_three_news_portal
-from .models import Form_four_news_portal
 from .models import School_alumnae
 from .models import School_updates
-from .models import School_admission
 from .models import School_core_values
-from .models import School_rules
 from .models import School_anthem
 from .models import School_performance
 from .models import School_peace_club
-from .models import School_technicals_department
 from .models import School_events_calendar
+from .models import School_languages_department
+from .models import School_math_department
+from .models import School_sciences_department
+from .models import School_humanities_department
+from .models import School_boarding_department
+from .models import School_games_department
+from .models import School_guiding_and_counseling_department
+from .models import School_technicals_department
+from .models import School_teachers
+from .models import School_student_council
 # Create your views here.
 def index(request):
     # this is your new view
@@ -93,19 +96,78 @@ def deputies(request):
     genead = School_general_information.objects.filter()
     return render(request, 'deputies.html', {'dpacademics':dpacademics, 'dpadmin':dpadmin, 'genead':genead})
 
+def teachers(request):
+        # this is your new view
+    teach = School_teachers.objects.filter()
+    generiht = School_general_information.objects.filter()
+    return render(request, 'teachers.html', {'teach':teach, 'generiht':generiht})
+
+def students(request):
+        # this is your new view
+    study = School_student_council.objects.filter()
+    generihs = School_general_information.objects.filter()
+    return render(request, 'students.html', {'study':study, 'generihs':generihs})
+
 def hods(request):
         # this is your new view
-    langues = School_languages_department.objects.all()
-    scies = School_sciences_department.objects.all()
-    board = School_boarding_department.objects.all()
-    game = School_games_department.objects.all()
-    guide = School_guiding_and_counseling_department.objects.all()
-    hume = School_humanities_department.objects.all()
-    maths = School_math_department.objects.all()
-    tech = School_technicals_department.objects.all()
+    langues = School_languages_hod.objects.all()
+    scies = School_sciences_hod.objects.all()
+    board = School_boarding_hod.objects.all()
+    game = School_games_hod.objects.all()
+    guide = School_guiding_and_counseling_hod.objects.all()
+    hume = School_humanities_hod.objects.all()
+    maths = School_math_hod.objects.all()
+    tech = School_technicals_hod.objects.all()
     geneids = School_general_information.objects.filter()
     return render(request, 'hods.html', {'langues':langues, 'scies':scies, 'board':board, 'game':game, 'guide':guide, 'hume':hume, 'maths':maths, 'tech':tech, 'geneids':geneids})
 
+def languages(request):
+        # this is your new view
+    ldep = School_languages_department.objects.all()
+    geneil = School_general_information.objects.filter()
+    return render(request, 'deplang.html', {'ldep':ldep, 'geneil':geneil})
+
+def sciences(request):
+        # this is your new view
+    sdep = School_sciences_department.objects.all()
+    geneis = School_general_information.objects.filter()
+    return render(request, 'depscie.html', {'sdep':sdep, 'geneis':geneis})
+
+def boarding(request):
+        # this is your new view
+    bdep = School_boarding_department.objects.all()
+    geneib = School_general_information.objects.filter()
+    return render(request, 'depboard.html', {'bdep':bdep, 'geneib':geneib})
+
+def games(request):
+        # this is your new view
+    gdep = School_games_department.objects.all()
+    geneig = School_general_information.objects.filter()
+    return render(request, 'depgame.html', {'gdep':gdep, 'geneig':geneig})
+
+def guidance(request):
+        # this is your new view
+    gudep = School_guiding_and_counseling_department.objects.all()
+    geneigu = School_general_information.objects.filter()
+    return render(request, 'depguide.html', {'gudep':gudep, 'geneigu':geneigu})
+
+def humanities(request):
+        # this is your new view
+    hdep = School_humanities_department.objects.all()
+    geneih = School_general_information.objects.filter()
+    return render(request, 'dephuman.html', {'hdep':hdep, 'geneih':geneih})
+
+def mathematics(request):
+        # this is your new view
+    mdep = School_math_department.objects.all()
+    geneim = School_general_information.objects.filter()
+    return render(request, 'depmath.html', {'mdep':mdep, 'geneim':geneim})
+
+def technicals(request):
+        # this is your new view
+    tdep = School_technicals_department.objects.all()
+    geneit = School_general_information.objects.filter()
+    return render(request, 'deptech.html', {'tdep':tdep, 'geneit':geneit})
 
 def bakery(request):
         # this is your new view
@@ -223,6 +285,13 @@ def performance(request):
     generi = School_general_information.objects.filter()
     return render(request, 'acperformance.html', {'perform':perform, 'generi':generi})
 
+def university(request):
+        # this is your new view
+    performu = School_performance.objects.filter()
+    generiu = School_general_information.objects.filter()
+    return render(request, 'university.html', {'performu':performu, 'generiu':generiu})
+
+
 def history(request):
         # this is your new view
     history = School_history.objects.filter()
@@ -244,25 +313,6 @@ def location(request):
     generiloc = School_general_information.objects.filter()
     return render(request, 'location.html', {'sitemap':sitemap, 'generiloc':generiloc})
 
-
-def admission(request):
-        # this is your new view
-    admi = School_admission.objects.all()
-    generj = School_general_information.objects.filter()
-    return render(request, 'stadmission.html', {'admi':admi, 'generj':generj})
-def downloads(request):
-        # this is your new view
-    down = School_documents_downloads.objects.all()
-    generk = School_general_information.objects.filter()
-    return render(request, 'stdownloads.html', {'down':down, 'generk':generk})
-def portal(request):
-        # this is your new view
-    pone = Form_one_news_portal.objects.all()
-    ptwo = Form_two_news_portal.objects.all()
-    pthree = Form_three_news_portal.objects.all()
-    pfour = Form_four_news_portal.objects.all()
-    generl = School_general_information.objects.filter()
-    return render(request, 'stportal.html', {'pone':pone, 'ptwo':ptwo, 'pthree':pthree, 'pfour':pfour, 'generl':generl})
 def updates(request):
         # this is your new view
     update = School_updates.objects.all()
@@ -274,12 +324,6 @@ def alumnae(request):
     genero = School_general_information.objects.filter()
     return render(request, 'alumnae.html', {'alum':alum, 'genero':genero})
 
-
-def rules(request):
-        # this is your new view
-    rulers = School_rules.objects.filter()
-    generm = School_general_information.objects.filter()
-    return render(request, 'strules.html', {'rulers':rulers, 'generm':generm})
 def anthem(request):
         # this is your new view
     anth = School_anthem.objects.filter()
@@ -303,13 +347,8 @@ def search(request):
      q = request.GET['q']
      scorer = School_general_information.objects.filter()
      updated = School_updates.objects.filter(news_title__icontains=q)
-     admnews = School_admission.objects.filter(news_title__icontains=q)
-     ponenews = Form_one_news_portal.objects.filter(news_title__icontains=q)
-     ptwonews = Form_two_news_portal.objects.filter(news_title__icontains=q)
-     pthreenews = Form_three_news_portal.objects.filter(news_title__icontains=q)
-     pfournews = Form_four_news_portal.objects.filter(news_title__icontains=q)
      alumnews = School_alumnae.objects.filter(name__icontains=q)
-     return render(request, 'search_results.html', {'alumnews':alumnews, 'ponenews':ponenews, 'ptwonews':ptwonews, 'pthreenews':pthreenews, 'pfournews':pfournews, 'admnews':admnews, 'scorer':scorer, 'updated':updated, 'query':q})
+     return render(request, 'search_results.html', {'alumnews':alumnews, 'scorer':scorer, 'updated':updated, 'query':q})
 
  else:
      return HttpResponse('Please submit a search term.')

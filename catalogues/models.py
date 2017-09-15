@@ -131,6 +131,174 @@ class School_dp_admin(models.Model):
     def __str__(self):
         return self.name
 
+class School_teachers(models.Model):
+    author = models.ForeignKey('auth.User')
+    text = models.TextField()
+    photo = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.text
+
+class School_student_council(models.Model):
+    author = models.ForeignKey('auth.User')
+    text = models.TextField()
+    photo = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.text
+
+class School_languages_hod(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200)
+    few_words = models.TextField()
+    photo = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_math_hod(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200)
+    few_words = models.TextField()
+    photo = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_sciences_hod(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200)
+    few_words = models.TextField()
+    photo = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_humanities_hod(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200)
+    few_words = models.TextField()
+    photo = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_technicals_hod(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200, null=True)
+    few_words = models.TextField(null=True)
+    photo = models.FileField(upload_to='uploads/', null=True)
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_boarding_hod(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200)
+    few_words = models.TextField()
+    photo = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_games_hod(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200)
+    few_words = models.TextField()
+    photo = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
+class School_guiding_and_counseling_hod(models.Model):
+    author = models.ForeignKey('auth.User')
+    name = models.CharField(max_length=200)
+    few_words = models.TextField()
+    photo = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+          default=timezone.now)
+    published_date = models.DateTimeField(
+          blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.name
+
 class School_languages_department(models.Model):
     author = models.ForeignKey('auth.User')
     name = models.CharField(max_length=200)
@@ -747,22 +915,6 @@ class School_beautification(models.Model):
     def __str__(self):
         return self.text
 
-class School_documents_downloads(models.Model):
-    author = models.ForeignKey('auth.User')
-    document_name = models.CharField(max_length=200)
-    document_file = models.FileField(upload_to='uploads/')
-    created_date = models.DateTimeField(
-         default=timezone.now)
-    published_date = models.DateTimeField(
-         blank=True, null=True)
-
-    def publish(self):
-       self.published_date = timezone.now()
-       self.save()
-
-    def __str__(self):
-        return self.document_name
-
 class School_general_information(models.Model):
     author = models.ForeignKey('auth.User')
     school_logo = models.FileField(upload_to='uploads/')
@@ -831,104 +983,7 @@ class School_core_values (models.Model):
     def __str__(self):
         return self.core_value_one
 
-class School_rules (models.Model):
-    author = models.ForeignKey('auth.User')
-    rule_title = models.CharField(max_length=300)
-    rule_description = models.TextField(blank=True)
-    created_date = models.DateTimeField(
-           default=timezone.now)
-    published_date = models.DateTimeField(
-           blank=True, null=True)
-
-    def publish(self):
-       self.published_date = timezone.now()
-       self.save()
-
-    def __str__(self):
-        return self.rule_title
-
 class School_updates (models.Model):
-    author = models.ForeignKey('auth.User')
-    news_title = models.CharField(max_length=200)
-    news_description = models.TextField()
-    created_date = models.DateTimeField(
-           default=timezone.now)
-    published_date = models.DateTimeField(
-           blank=True, null=True)
-
-    def publish(self):
-       self.published_date = timezone.now()
-       self.save()
-
-    def __str__(self):
-        return self.news_title
-
-class School_admission (models.Model):
-    author = models.ForeignKey('auth.User')
-    news_title = models.CharField(max_length=200)
-    news_description = models.TextField()
-    created_date = models.DateTimeField(
-           default=timezone.now)
-    published_date = models.DateTimeField(
-           blank=True, null=True)
-
-    def publish(self):
-       self.published_date = timezone.now()
-       self.save()
-
-    def __str__(self):
-        return self.news_title
-
-
-class Form_one_news_portal(models.Model):
-    author = models.ForeignKey('auth.User')
-    news_title = models.CharField(max_length=200)
-    news_description = models.TextField()
-    created_date = models.DateTimeField(
-           default=timezone.now)
-    published_date = models.DateTimeField(
-           blank=True, null=True)
-
-    def publish(self):
-       self.published_date = timezone.now()
-       self.save()
-
-    def __str__(self):
-        return self.news_title
-
-class Form_two_news_portal(models.Model):
-    author = models.ForeignKey('auth.User')
-    news_title = models.CharField(max_length=200)
-    news_description = models.TextField()
-    created_date = models.DateTimeField(
-           default=timezone.now)
-    published_date = models.DateTimeField(
-           blank=True, null=True)
-
-    def publish(self):
-       self.published_date = timezone.now()
-       self.save()
-
-    def __str__(self):
-        return self.news_title
-
-class Form_three_news_portal(models.Model):
-    author = models.ForeignKey('auth.User')
-    news_title = models.CharField(max_length=200)
-    news_description = models.TextField()
-    created_date = models.DateTimeField(
-           default=timezone.now)
-    published_date = models.DateTimeField(
-           blank=True, null=True)
-
-    def publish(self):
-       self.published_date = timezone.now()
-       self.save()
-
-    def __str__(self):
-        return self.news_title
-
-class Form_four_news_portal(models.Model):
     author = models.ForeignKey('auth.User')
     news_title = models.CharField(max_length=200)
     news_description = models.TextField()
@@ -979,6 +1034,8 @@ class School_performance(models.Model):
     grades_E = models.IntegerField(default=00)
     grades_F = models.IntegerField(default=00)
     school_mean_score = models.FloatField(default=00)
+    university_qualified = models.IntegerField(default=00)
+    total_students = models.IntegerField(default=00)
     created_date = models.DateTimeField(
              default=timezone.now)
     published_date = models.DateTimeField(

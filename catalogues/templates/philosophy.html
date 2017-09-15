@@ -42,11 +42,11 @@
           {% for school_mission in mission %}
           <div class="wthree-news-left">
             <div class="wthree-news-left-img">
-              <div class="w3-agile-news-text">
-                <br/><p style="opacity:0.8; font-size:17px; width:100%; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; "><strong>{{ school_mission.text }}</strong></p>
-              </div>
-                <div id="fb-root"></div>
               <img src="{{ school_mission.photo.url }}" width="100%" height="auto" alt="" />
+              <div id="fb-root"></div>
+              <div class="w3-agile-news-text">
+                <br/><p style="opacity:0.8; font-size:30px; width:100%; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; "><strong>{{ school_mission.text }}</strong></p>
+              </div>
             </div>
           </div>
           {% endfor %}
@@ -57,11 +57,11 @@
         {% for school_vision in vision %}
         <div class="wthree-news-left">
           <div class="wthree-news-left-img">
-            <div class="w3-agile-news-text">
-              <br/><p style="opacity:0.8; font-size:17px; width:100%; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_vision.text }}</strong></p>
-            </div>
-            <div id="fb-root"></div>
             <img src="{{ school_vision.photo.url }}" width="100%" height="auto" alt="" />
+            <div id="fb-root"></div>
+            <div class="w3-agile-news-text">
+              <br/><p style="opacity:0.8; font-size:30px; width:100%; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_vision.text }}</strong></p>
+            </div>
           </div>
         </div>
         {% endfor %}

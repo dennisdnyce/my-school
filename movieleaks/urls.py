@@ -33,7 +33,18 @@ urlpatterns = [
     url(r'^location/$', views.location, name='location'),
 
     url(r'^hods/$', views.hods, name='hods'),
-    
+    url(r'^teachers/$', views.teachers, name='teachers'),
+    url(r'^students/$', views.students, name='students'),
+
+    url(r'^languages/$', views.languages, name='languages'),
+    url(r'^sciences/$', views.sciences, name='sciences'),
+    url(r'^boarding/$', views.boarding, name='boarding'),
+    url(r'^games/$', views.games, name='games'),
+    url(r'^guidance/$', views.guidance, name='guidance'),
+    url(r'^humanities/$', views.humanities, name='humanities'),
+    url(r'^mathematics/$', views.mathematics, name='mathematics'),
+    url(r'^technicals/$', views.technicals, name='technicals'),
+
     url(r'^bakery/$', views.bakery, name='bakery'),
     url(r'^library/$', views.library, name='library'),
     url(r'^laboratories/$', views.laboratories, name='laboratories'),
@@ -57,12 +68,8 @@ urlpatterns = [
     url(r'^peace/$', views.peace, name='peace'),
 
     url(r'^performance/$', views.performance, name='performance'),
+    url(r'^university/$', views.university, name='university'),
 
-
-    url(r'^admission/$', views.admission, name='admission'),
-    url(r'^downloads/$', views.downloads, name='downloads'),
-    url(r'^portal/$', views.portal, name='portal'),
-    url(r'^rules/$', views.rules, name='rules'),
     url(r'^updates/$', views.updates, name='updates'),
     url(r'^alumnae/$', views.alumnae, name='alumnae'),
 

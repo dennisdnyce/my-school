@@ -75,7 +75,7 @@
       <td >
         <div class="latest-text w3_latest_text" style="color:#ffffff; background-color:; width:300px;"><strong><u><center>School News Updates</center></u></strong></div>
         <div style="width:100%; height:auto;">
-          <marquee  behavior="scroll" direction="up" height="500" scrollamount="1" scrolldelay="0"  >
+          <marquee  behavior="scroll" direction="up" height="500" scrollamount="1" scrolldelay="50"  >
           <center>
 
             <!-- date -->
@@ -89,24 +89,6 @@
                   {% endfor %}
                 </div>
               </div>
-              <script>
-              function blinker() {
-
-                $('.blinking').fadeIn(1000);
-              }
-              setInterval(blinker, 2000);
-              </script>
-              <script>
-                function cycle($item, $cycler){
-                  setTimeout(cycle, 50000, $item.next(), $cycler);
-
-                  $item.slideUp(10000,function(){
-                    $item.appendTo($cycler).show();
-                  });
-                  }
-                cycle($('#cycler div:first'),  $('#cycler'));
-              </script>
-            </div>
             <!-- //date -->
 
          </center>
@@ -127,14 +109,14 @@
 
    </div>
 
-   <div class="latest-text w3_latest_text" style="color:#ffffff; background-color:#303030; width:200px;"><strong><center><u>School Events Calendar</u></center></strong></div><br/>
+   <div class="latest-text w3_latest_text" style="opacity:0.8; font-size:20px; color:#000000; background-color:; width:250px;"><strong><center><u><b>School Events Calendar</b></u></center></strong></div><br/>
    <div>
    <center>
      <div class="agile-news-table">
        <div style="overflow-x:auto;" >
        <table >
          <thead>
-           <tr style="opacity:0.8; font-size:20px; width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+           <tr style="opacity:0.8; font-size:20px; max-width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
            <th ><center>January</center></th>
            <th ><center>February</center></th>
            <th ><center>March</center></th>
@@ -143,7 +125,7 @@
          <tbody>
 
            {% for school_events_calendar in calendar %}
-           <tr style="opacity:0.8; font-size:20px; width:100%; color:#ffffff; background-color:#32a9f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+           <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#32a9f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.jan|safe }}<br/></a></center></td>
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.feb|safe }}<br/></a></center></td>
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.mar|safe }}<br/></a></center></td>
@@ -154,7 +136,7 @@
 
        <table >
          <thead>
-           <tr style="opacity:0.8; font-size:20px; width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+           <tr style="opacity:0.8; font-size:20px; max-width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
            <th ><center>April</center></th>
            <th ><center>May</center></th>
            <th><center>June</center></th>
@@ -163,7 +145,7 @@
          <tbody>
 
            {% for school_events_calendar in calendar %}
-           <tr style="opacity:0.8; font-size:20px; width:100%; color:#ffffff; background-color:#32a9f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+           <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#32a9f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.apr|safe }}<br/></a></center></td>
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.may|safe }}<br/></a></center></td>
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.jun|safe }}<br/></a></center></td>
@@ -174,7 +156,7 @@
 
        <table >
          <thead>
-           <tr style="opacity:0.8; font-size:20px; width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+           <tr style="opacity:0.8; font-size:20px; max-width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
            <th ><center>July</center></th>
            <th ><center>August</center></th>
            <th ><center>September</center></th>
@@ -183,7 +165,7 @@
          <tbody>
 
            {% for school_events_calendar in calendar %}
-           <tr style="opacity:0.8; font-size:20px; width:100%; color:#ffffff; background-color:#32a9f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+           <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#32a9f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.jul|safe }}<br/></a></center></td>
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.aug|safe }}<br/></a></center></td>
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.sep|safe }}<br/></a></center></td>
@@ -195,7 +177,7 @@
 
        <table >
          <thead>
-           <tr style="opacity:0.8; font-size:20px; width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+           <tr style="opacity:0.8; font-size:20px; max-width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
            <th ><center>October</center></th>
            <th><center>November</center></th>
            <th><center>December</center></th>
@@ -204,7 +186,7 @@
          <tbody>
 
            {% for school_events_calendar in calendar %}
-           <tr style="opacity:0.8; font-size:20px; width:100%; color:#ffffff; background-color:#32a9f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+           <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#32a9f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.octo|safe }}<br/></a></center></td>
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.nov|safe }}<br/></a></center></td>
            <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>{{ school_events_calendar.dec|safe }}<br/></a></center></td>

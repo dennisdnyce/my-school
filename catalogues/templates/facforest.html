@@ -40,10 +40,10 @@
 							<div class="wthree-news-left">
 								<div class="wthree-news-left-img">
                   {% for school_forest in forest %}
-									<img src="{{ school_forest.photo.url }}" width="100%" height="auto" alt="" />
+									<img src="{{ school_forest.photo.url }}" width="50%" height="auto" alt="" />
 									<div id="fb-root"></div>
 									<div class="w3-agile-news-text">
-										<br/><p style="opacity:0.8; font-size:17px; width:100%; font-color:ffffff; background-color:#282c34; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_forest.text|safe }}</p><br/>
+										<br/><p style="opacity:; font-size:30px; width:100%; color:#1da1f2; background-color:; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">{{ school_forest.text|safe }}</p><br/>
 									</div>
                   {% endfor %}
 								</div>

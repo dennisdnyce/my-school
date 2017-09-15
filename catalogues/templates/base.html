@@ -195,9 +195,9 @@ tr:nth-child(even){background-color: #f2f2f2}
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
                     <ul class="dropdown-menu multi-level">
-                        <li><a href="{% url 'philosophy' %}">Our Philosophy</a></li>
-												<li><a href="{% url 'location' %}">Location</a></li>
-												<li><a href="{% url 'history' %}">History</a></li>
+                        <li><a href="{% url 'philosophy' %}"><b>Our Philosophy</b></a></li>
+												<li><a href="{% url 'location' %}"><b>Location</b></a></li>
+												<li><a href="{% url 'history' %}"><b>History</b></a></li>
 												<li class="dropdown-submenu">
 														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Management</a>
 														<ul class="dropdown-menu">
@@ -211,8 +211,8 @@ tr:nth-child(even){background-color: #f2f2f2}
 															 <li><a href="{% url 'principal' %}"><b>principal</b></a></li>
 															 <li><a href="{% url 'deputies' %}"><b>deputies</b></a></li>
 															 <li><a href="{% url 'hods' %}"><b>HODs</b></a></li>
-															 <li><a href="{% url 'deputies' %}"><b>Teachers</b></a></li>
-															 <li><a href="{% url 'deputies' %}"><b>Council</b></a></li>
+															 <li><a href="{% url 'teachers' %}"><b>Teachers</b></a></li>
+															 <li><a href="{% url 'students' %}"><b>Student Council</b></a></li>
 														</ul>
 												</li>
                     </ul>
@@ -223,8 +223,8 @@ tr:nth-child(even){background-color: #f2f2f2}
 										<li>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'performance' %}">K.C.S.E</a></li>
-												<li><a href="{% url 'performance' %}">University</a></li>
+												<li><a href="{% url 'performance' %}"><b>K.C.S.E_trends</b></a></li>
+												<li><a href="{% url 'university' %}"><b>University Transition</b></a></li>
 											</ul>
 										</div>
 
@@ -233,33 +233,40 @@ tr:nth-child(even){background-color: #f2f2f2}
 									</ul>
 								</li>
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acade<b class="caret"></b></a>
-									<ul class="dropdown-menu multi-column columns-3">
-										<li>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<li><a href="#">smh</a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-										</li>
-									</ul>
-								</li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Academic Depts<b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-3">
+									<li>
+									<div class="col-sm-4">
+										<ul class="multi-column-dropdown">
+											<li><a href="{% url 'languages' %}"><b>Languages</b></a></li>
+											<li><a href="{% url 'mathematics' %}"><b>Mathematics</b></a></li>
+											<li><a href="{% url 'sciences' %}"><b>Sciences</b></a></li>
+											<li><a href="{% url 'humanities' %}"><b>Humanities</b></a></li>
+											<li><a href="{% url 'technicals' %}"><b>Technicals</b></a></li>
+											<li><a href="{% url 'boarding' %}"><b>Boarding</b></a></li>
+											<li><a href="{% url 'games' %}"><b>Games</b></a></li>
+											<li><a href="{% url 'guidance' %}"><b>Guiding_and Counseling</b></a></li>
+										</ul>
+									</div>
+									<div class="clearfix"></div>
+									</li>
+								</ul>
+							</li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Co-Curricular<b class="caret"></b></a>
 									<ul class="dropdown-menu multi-column columns-3">
 										<li>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'drama' %}">Drama</a></li>
-												<li><a href="{% url 'music' %}">Music</a></li>
-												<li><a href="{% url 'sports' %}">Sports</a></li>
-												<li><a href="{% url 'christianunion' %}">Christian Union</a></li>
-												<li><a href="{% url 'muslimstudents' %}">Muslim Students</a></li>
-												<li><a href="{% url 'journalism' %}">Journalism</a></li>
-												<li><a href="{% url 'debate' %}">Debate</a></li>
-												<li><a href="{% url 'scienceengineering' %}">Science Engineering</a></li>
-												<li><a href="{% url 'peace' %}">Peace club</a></li>
+												<li><a href="{% url 'drama' %}"><b>Drama</b></a></li>
+												<li><a href="{% url 'music' %}"><b>Music</b></a></li>
+												<li><a href="{% url 'sports' %}"><b>Sports</b></a></li>
+												<li><a href="{% url 'christianunion' %}"><b>Christian_Union</b></a></li>
+												<li><a href="{% url 'muslimstudents' %}"><b>Muslim_Students</b></a></li>
+												<li><a href="{% url 'journalism' %}"><b>Journalism</b></a></li>
+												<li><a href="{% url 'debate' %}"><b>Debate</b></a></li>
+												<li><a href="{% url 'scienceengineering' %}"><b>Scie_Engineering</b></a></li>
+												<li><a href="{% url 'peace' %}"><b>Peace_club</b></a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -272,40 +279,25 @@ tr:nth-child(even){background-color: #f2f2f2}
 										<li>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'library' %}">Library</a></li>
-												<li><a href="{% url 'laboratories' %}">Laboratories</a></li>
-												<li><a href="{% url 'dininghall' %}">Dining Hall</a></li>
-												<li><a href="{% url 'classrooms' %}">Classrooms</a></li>
-												<li><a href="{% url 'transport' %}">Transport</a></li>
-												<li><a href="{% url 'schoolfence' %}">School Fence</a></li>
-												<li><a href="{% url 'forest' %}">Forest</a></li>
-												<li><a href="{% url 'bakery' %}">Bakery</a></li>
-												<li><a href="{% url 'carpark' %}">Car Park</a></li>
-												<li><a href="{% url 'beautification' %}">Beautification</a></li>
-												<li><a href="{% url 'generator' %}">Generator</a></li>
+												<li><a href="{% url 'library' %}"><b>Library</b></a></li>
+												<li><a href="{% url 'laboratories' %}"><b>Laboratories</b></a></li>
+												<li><a href="{% url 'dininghall' %}"><b>Dining_Hall</b></a></li>
+												<li><a href="{% url 'classrooms' %}"><b>Classrooms</b></a></li>
+												<li><a href="{% url 'transport' %}"><b>Transport</b></a></li>
+												<li><a href="{% url 'schoolfence' %}"><b>School_Fence</b></a></li>
+												<li><a href="{% url 'forest' %}"><b>Forest</b></a></li>
+												<li><a href="{% url 'bakery' %}"><b>Bakery</b></a></li>
+												<li><a href="{% url 'carpark' %}"><b>Car_Park</b></a></li>
+												<li><a href="{% url 'beautification' %}"><b>Beautification</b></a></li>
+												<li><a href="{% url 'generator' %}"><b>Generator</b></a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
 										</li>
 									</ul>
 								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Alumnae<b class="caret"></b></a>
-									<ul class="dropdown-menu multi-column columns-3">
-										<li>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'admission' %}">Admission</a></li>
-												<li><a href="{% url 'rules' %}">Rules</a></li>
-												<li><a href="{% url 'portal' %}">student portal</a></li>
-												<li><a href="{% url 'downloads' %}">Downloads</a></li>
-												<li><a href="{% url 'updates' %}">updates</a></li>
-												<li><a href="{% url 'alumnae' %}">Alumnae</a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-										</li>
-									</ul>
+								<li >
+									<a href="{% url 'alumnae' %}" >Alumnae</a>
 								</li>
 
             </ul>
@@ -320,6 +312,25 @@ tr:nth-child(even){background-color: #f2f2f2}
 <!-- banner -->
 {% block slide_content %}
 {% endblock %}
+
+<script>
+function blinker() {
+	$('.blinking').fadeOut(500);
+	$('.blinking').fadeIn(500);
+}
+setInterval(blinker, 1000);
+</script>
+<script>
+	function cycle($item, $cycler){
+		setTimeout(cycle, 2000, $item.next(), $cycler);
+
+		$item.slideUp(1000,function(){
+			$item.appendTo($cycler).show();
+		});
+		}
+	cycle($('#cycler div:first'),  $('#cycler'));
+</script>
+</div>
 <!-- //banner -->
 <!-- banner-bottom -->
 
