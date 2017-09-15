@@ -925,6 +925,7 @@ class School_general_information(models.Model):
     school_address = models.TextField()
     school_website = models.TextField(null=True)
     school_emailaddress = models.CharField(max_length=200)
+    address_icon = models.FileField(upload_to='uploads/', null=True)
     school_phone_number = models.CharField(max_length=200)
     other_phone_number = models.CharField(max_length=200, null=True)
     created_date = models.DateTimeField(
