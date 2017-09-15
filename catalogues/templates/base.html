@@ -313,24 +313,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 {% block slide_content %}
 {% endblock %}
 
-<script>
-function blinker() {
-	$('.blinking').fadeOut(500);
-	$('.blinking').fadeIn(500);
-}
-setInterval(blinker, 1000);
-</script>
-<script>
-	function cycle($item, $cycler){
-		setTimeout(cycle, 2000, $item.next(), $cycler);
 
-		$item.slideUp(1000,function(){
-			$item.appendTo($cycler).show();
-		});
-		}
-	cycle($('#cycler div:first'),  $('#cycler'));
-</script>
-</div>
 <!-- //banner -->
 <!-- banner-bottom -->
 

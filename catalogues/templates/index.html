@@ -80,23 +80,42 @@
 
             <!-- date -->
             <div id="design" class="date" style="width:80%; height:auto;">
-              <div id="cycler" style="width:100%; height:auto;">
-                <div class="date-text" style="width:100%; height:auto;">
+              <div style="width:100%; height:auto;">
+                <div id="cycler" class="date-text" style="width:100%; height:auto;">
                   {% for school_updates in updater %}
                            <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">published: <b>{{ school_updates.created_date }}</b></p>
                            <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong><u>{{ school_updates.news_title }}</u></strong></p>
                            <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_updates.news_description|safe }}</strong></p><br/>
                   {% endfor %}
-                </div>
+
+
+                <script>
+                function blinker() {
+                  $('.blinking').fadeOut(500);
+                  $('.blinking').fadeIn(500);
+                }
+                setInterval(blinker, 1000);
+                </script>
+                <script>
+                  function cycle($item, $cycler){
+                    setTimeout(cycle, 2000, $item.next(), $cycler);
+
+                    $item.slideUp(1000,function(){
+                      $item.appendTo($cycler).show();
+                    });
+                    }
+                  cycle($('#cycler div:first'),  $('#cycler'));
+                </script>
+                  </div>
               </div>
             <!-- //date -->
-
          </center>
         </marquee>
         </div>
       </td>
     </tr>
     </table>
+    </div>
     </div>
     </div>
 
