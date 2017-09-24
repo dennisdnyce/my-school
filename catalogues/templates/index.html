@@ -73,52 +73,50 @@
     	 </div>
        </div>
       </td>
-      <td >
-        <div class="latest-text w3_latest_text" style="color:#ffffff; background-color:; width:300px;"><strong><u><center>School News Updates</center></u></strong></div>
-        <div style="width:100%; height:auto;">
-          <marquee  behavior="scroll" direction="up" height="500" scrollamount="1" scrolldelay="50"  >
-          <center>
-
+      <td  style="background-color:#1da1f2;">
+        <div class="latest-text w3_latest_text" style="color:#ffffff; background-color:; width:240px;"><strong><u><center>School News Updates</center></u></strong></div>
+        <div class="wthree-news-right-top">
+          <div class="news-grids-bottom">
             <!-- date -->
-            <div id="design" class="date" style="width:80%; height:auto;">
-              <div style="width:100%; height:auto;">
-                <div id="cycler" class="date-text" style="width:100%; height:auto;">
+            <div id="design" class="date" style="height:500px; background-color:#1da1f2;">
+              <div id="cycler" class="date-text" style="width:100%; background-color:#1da1f2;">
+
                   {% for school_updates in updater %}
+                  <div class="date-text" style="height:auto; background-color:#1da1f2;">
                            <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">published: <b>{{ school_updates.created_date }}</b></p>
                            <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong><u>{{ school_updates.news_title }}</u></strong></p>
                            <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_updates.news_description|safe }}</strong></p><br/>
+                  </div>
                   {% endfor %}
 
-
-                <script>
-                function blinker() {
-                  $('.blinking').fadeOut(500);
-                  $('.blinking').fadeIn(500);
-                }
-                setInterval(blinker, 1000);
-                </script>
-                <script>
-                  function cycle($item, $cycler){
-                    setTimeout(cycle, 2000, $item.next(), $cycler);
-
-                    $item.slideUp(1000,function(){
-                      $item.appendTo($cycler).show();
-                    });
-                    }
-                  cycle($('#cycler div:first'),  $('#cycler'));
-                </script>
-                  </div>
               </div>
+              <script>
+              function blinker() {
+                $('.blinking').fadeOut(500);
+                $('.blinking').fadeIn(500);
+              }
+              setInterval(blinker, 1000);
+              </script>
+              <script>
+                function cycle($item, $cycler){
+                  setTimeout(cycle, 7000, $item.next(), $cycler);
+
+                  $item.slideUp(1000,function(){
+                    $item.appendTo($cycler).show();
+                  });
+                  }
+                cycle($('#cycler div:first'),  $('#cycler'));
+              </script>
+            </div>
             <!-- //date -->
-         </center>
-        </marquee>
+          </div>
         </div>
       </td>
     </tr>
     </table>
     </div>
     </div>
-    </div>
+
 
 
     <center>
@@ -237,6 +235,6 @@
 
 {% block general_foot %}
    {% for school_general_information in general %}
- <p>Copyright &copy; {{ school_general_information.current_year }} <br/>NjoNjo Girls High School. {{ school_general_information.school_address }}<br/> All Rights Reserved. Designed by <a href="http://www.peerware.co.ke" target="_blank">PHS</a></p>
+ <p>Copyright &copy; {{ school_general_information.current_year }} <br/>NjoNjo Girls High School. {{ school_general_information.school_address }}<br/> All Rights Reserved. Designed by <a href="http://www.peerware.co.ke" target="_blank">peerware</a></p>
    {% endfor %}
 {% endblock %}

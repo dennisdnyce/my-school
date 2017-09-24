@@ -141,10 +141,10 @@ ol.breadcrumb li a{
 .wthree-news-right-top{
     background: #FFFFFF;
     padding: 1em;
-    min-height: 900px;
+    height: 300px;
 }
 .date-text{
-	position:relative;
+	position: center;
 }
 .date-text a{
     font-size: 1em;
