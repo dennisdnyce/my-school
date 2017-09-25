@@ -49,7 +49,6 @@ from .models import School_core_values
 from .models import School_anthem
 from .models import School_performance
 from .models import School_peace_club
-from .models import School_events_calendar
 from .models import School_languages_department
 from .models import School_math_department
 from .models import School_sciences_department
@@ -60,6 +59,18 @@ from .models import School_guiding_and_counseling_department
 from .models import School_technicals_department
 from .models import School_teachers
 from .models import School_student_council
+from .models import School_events_january
+from .models import School_events_february
+from .models import School_events_march
+from .models import School_events_april
+from .models import School_events_may
+from .models import School_events_june
+from .models import School_events_july
+from .models import School_events_august
+from .models import School_events_september
+from .models import School_events_october
+from .models import School_events_november
+from .models import School_events_december
 
 # Register your models here.
 admin.site.register(School_photo_gallery)
@@ -112,7 +123,6 @@ admin.site.register(School_core_values)
 admin.site.register(School_anthem)
 admin.site.register(School_performance)
 admin.site.register(School_peace_club)
-admin.site.register(School_events_calendar)
 admin.site.register(School_languages_department)
 admin.site.register(School_math_department)
 admin.site.register(School_sciences_department)
@@ -123,3 +133,15 @@ admin.site.register(School_guiding_and_counseling_department)
 admin.site.register(School_technicals_department)
 admin.site.register(School_teachers)
 admin.site.register(School_student_council)
+admin.site.register(School_events_january)
+admin.site.register(School_events_february)
+admin.site.register(School_events_march)
+admin.site.register(School_events_april)
+admin.site.register(School_events_may)
+admin.site.register(School_events_june)
+admin.site.register(School_events_july)
+admin.site.register(School_events_august)
+admin.site.register(School_events_september)
+admin.site.register(School_events_october)
+admin.site.register(School_events_november)
+admin.site.register(School_events_december)

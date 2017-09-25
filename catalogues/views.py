@@ -52,7 +52,6 @@ from .models import School_core_values
 from .models import School_anthem
 from .models import School_performance
 from .models import School_peace_club
-from .models import School_events_calendar
 from .models import School_languages_department
 from .models import School_math_department
 from .models import School_sciences_department
@@ -63,14 +62,37 @@ from .models import School_guiding_and_counseling_department
 from .models import School_technicals_department
 from .models import School_teachers
 from .models import School_student_council
+from .models import School_events_january
+from .models import School_events_february
+from .models import School_events_march
+from .models import School_events_april
+from .models import School_events_may
+from .models import School_events_june
+from .models import School_events_july
+from .models import School_events_august
+from .models import School_events_september
+from .models import School_events_october
+from .models import School_events_november
+from .models import School_events_december
 # Create your views here.
 def index(request):
     # this is your new view
     gallery = School_photo_gallery.objects.all()
     updater = School_updates.objects.all()
-    calendar = School_events_calendar.objects.all()
+    jane = School_events_january.objects.all()
+    febe = School_events_february.objects.all()
+    mare = School_events_march.objects.all()
+    apre = School_events_april.objects.all()
+    maye = School_events_may.objects.all()
+    june = School_events_june.objects.all()
+    jule = School_events_july.objects.all()
+    auge = School_events_august.objects.all()
+    sepe = School_events_september.objects.all()
+    octe = School_events_october.objects.all()
+    nove = School_events_november.objects.all()
+    dece = School_events_december.objects.all()
     general = School_general_information.objects.filter()
-    return render(request, 'index.html', {'gallery':gallery, 'updater':updater, 'calendar':calendar, 'general':general})
+    return render(request, 'index.html', {'gallery':gallery, 'updater':updater, 'jane':jane, 'febe':febe, 'mare':mare, 'apre':apre, 'maye':maye, 'june':june, 'jule':jule, 'auge':auge, 'sepe':sepe, 'octe':octe, 'nove':nove, 'dece':dece, 'general':general})
 def bog(request):
     # this is your new view
     bogchair = School_bog_chairperson.objects.filter()
