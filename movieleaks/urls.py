@@ -72,6 +72,7 @@ urlpatterns = [
 
     url(r'^updates/$', views.updates, name='updates'),
     url(r'^alumnae/$', views.alumnae, name='alumnae'),
+    url(r'^downloads/$', views.downloads, name='downloads'),
 
     url(r'^anthem/$', views.anthem, name='anthem'),
     url(r'^contact/$', views.contact, name='contact'),

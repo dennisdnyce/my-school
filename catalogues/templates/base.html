@@ -296,10 +296,20 @@ tr:nth-child(even){background-color: #f2f2f2}
 										</li>
 									</ul>
 								</li>
-								<li >
-									<a href="{% url 'alumnae' %}" >Alumnae</a>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Students Info<b class="caret"></b></a>
+									<ul class="dropdown-menu multi-column columns-3">
+										<li>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="{% url 'alumnae' %}" ><b>alumnae</b></a></li>
+												<li><a href="{% url 'downloads' %}"><b>downloads</b></a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+										</li>
+									</ul>
 								</li>
-
             </ul>
         </div>
 			</nav><!--/.nav-collapse -->

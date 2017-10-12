@@ -47,6 +47,7 @@ from .models import School_generator
 from .models import School_beautification
 from .models import School_general_information
 from .models import School_alumnae
+from .models import School_downloads
 from .models import School_updates
 from .models import School_core_values
 from .models import School_anthem
@@ -340,11 +341,18 @@ def updates(request):
     update = School_updates.objects.all()
     genern = School_general_information.objects.filter()
     return render(request, 'stupdates.html', {'update':update, 'genern':genern})
+
 def alumnae(request):
         # this is your new view
     alum = School_alumnae.objects.all()
     genero = School_general_information.objects.filter()
     return render(request, 'alumnae.html', {'alum':alum, 'genero':genero})
+
+def downloads(request):
+        # this is your new view
+    downer = School_downloads.objects.all()
+    generoed = School_general_information.objects.filter()
+    return render(request, 'downloads.html', {'downer':downer, 'generoed':generoed})
 
 def anthem(request):
         # this is your new view

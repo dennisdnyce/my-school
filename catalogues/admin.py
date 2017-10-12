@@ -44,6 +44,7 @@ from .models import School_generator
 from .models import School_beautification
 from .models import School_general_information
 from .models import School_alumnae
+from .models import School_downloads
 from .models import School_updates
 from .models import School_core_values
 from .models import School_anthem
@@ -118,6 +119,7 @@ admin.site.register(School_generator)
 admin.site.register(School_beautification)
 admin.site.register(School_general_information)
 admin.site.register(School_alumnae)
+admin.site.register(School_downloads)
 admin.site.register(School_updates)
 admin.site.register(School_core_values)
 admin.site.register(School_anthem)

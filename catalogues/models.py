@@ -1143,8 +1143,6 @@ class School_updates (models.Model):
 
 class School_alumnae(models.Model):
     author = models.ForeignKey('auth.User')
-    achievement = models.CharField(max_length=250)
-    name = models.CharField(max_length=200)
     few_words = models.TextField()
     photo = models.FileField(upload_to='uploads/')
     created_date = models.DateTimeField(
@@ -1157,7 +1155,23 @@ class School_alumnae(models.Model):
        self.save()
 
     def __str__(self):
-        return self.name
+        return self.few_words
+
+class School_downloads(models.Model):
+    author = models.ForeignKey('auth.User')
+    document_name = models.CharField(max_length=200)
+    document_file = models.FileField(upload_to='uploads/')
+    created_date = models.DateTimeField(
+         default=timezone.now)
+    published_date = models.DateTimeField(
+         blank=True, null=True)
+
+    def publish(self):
+       self.published_date = timezone.now()
+       self.save()
+
+    def __str__(self):
+        return self.document_name
 
 class School_performance(models.Model):
     author = models.ForeignKey('auth.User')
